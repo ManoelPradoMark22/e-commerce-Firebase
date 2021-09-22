@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorveteria Chaplin</title>
+
+    <!-- aos css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- google fonts cdn link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#inicio" class="logo"><img src="images/chaplinlogoPNG.png" alt=""></a>
+
+    <div id="menu-bar" class="fas fa-hamburger"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="#inicio">Início</a></li>
+            <li><a href="#lanchonete">Lanchonete</a></li>
+            <li><a href="#pizzaria">Pizzaria</a></li>
+            <li><a href="#sorveteria">Sorveteria</a></li>
+            <li><a href="#padaria">Padaria</a></li>
+            <li><a href="#outros">Muito+</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+</header>
+<!-- header section ends -->
+
+<div class="bagDiv">
+    <div class="insideBagDiv">
+        <i class="fas fa-shopping-bag"></i>
+        <div id="badgeId" class="badgeCountItens">
+            0
+        </div>
+    </div>
+</div>
+
+<div class="producstOnCart hide">
+    <div class="overlay"></div>
+    <div class="top">
+        <button id="closeButton">
+            <i class="fas fa-times-circle"></i>
+        </button>
+        <h3>Sacola</h3>
+        <div id="cartSumTotal"></div>
+    </div>
+    <ul id="buyItems">
+        <h4 class="empty">Sua sacola está vazia!</h4>
+        <!-- <li class="buyItem">
+            <img src="">
+            <div>
+                <h5>Products Name</h5>
+                <h6>$199</h6>
+                <div>
+                    <button>-</button>
+                    <span class="countOfProduct">1</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </li> -->
+    </ul>
+    <p class="warningDelivery">Apenas retirada no estabelecimento. Delivery em breve... &#128757;</p>
+    <a
+        id="buttonWhatsapp"
+        href="https://api.whatsapp.com/send?phone=+5577991998770&text=Oi! Gostaria de saber mais sobre os produtos da Santa Maria do Ouro."
+        target="_blank">
+        <button class="btnConfirmShop checkout hidden"><i class="fab fa-whatsapp"></i>Enviar Pedido</button>
+    </a>
+    
+</div>
+
+<!-- home section starts  -->
+
+<section class="home" id="inicio">
+
+    <div class="content" data-aos="fade-right">
+        <h3>Um pouco de tudo!</h3>
+        <p>Nós acreditamos que uma boa variedade e qualidade de comida é sempre responsável por um belo sorriso no rosto!</p>
+        <div class="chromeWarning">Para melhor experiência do usuário, utilize o
+            <div class="dropdownChrome">
+                <button type="button" class="btnChrome">Google Chrome<img class="chromeImg" src="images/chromeLogoComp.png" alt="chromeLogo"/></button>
+                <div class="dropdown-contentChrome">
+                    <div>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.android.chrome"
+                            target="_blank">
+                            <button><i class="fab fa-android"></i>Android</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a
+                            href="https://apps.apple.com/br/app/google-chrome/id535886823"
+                            target="_blank">
+                            <button><i class="fab fa-apple"></i>iOS</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a
+                            href="https://www.google.com/intl/pt-BR/chrome/"
+                            target="_blank">
+                            <button><i class="fas fa-desktop"></i>PC</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#lanchonete"><button class="btn">Nosso Menu</button></a>
+    </div>
+
+    <div class="image" data-aos="fade-up">
+        <img src="images/pizzaIcon.png" alt="">
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- lanchonete section starts  -->
+
+<section class="menu" id="lanchonete">
+
+<h1 class="heading"> Nosso Delicioso <span>Menu</span> </h1>
+<br>
+<br>
+<h3 class="heading" data-aos="fade-down"><span><i class="fas fa-hamburger" style=" margin-right: 5px;"></i></span>Lanchonete<span><i class="fas fa-hamburger" style=" margin-left: 5px;"></i></span></h3>
+<br>
+<ul class="list" data-aos="fade-down">
+    <li class="btn active" onclick="openLanchonete('1tab1')">Lanches</li>
+    <li class="btn" onclick="openLanchonete('1tab2')">Porções</li>
+    <li class="btn" onclick="openLanchonete('1tab3')">Assados</li>
+    <li class="btn" onclick="openLanchonete('1tab4')">Fritos</li>
+</ul>
+
+<div id="1tab1" class="row tabLanchonete" data-aos="fade-right">
+
+    <div class="scroll" style="overflow-y: auto;">
+        <div style="display: flex;width: max-content;">
+            <ul class="listInside">
+                <li class="btnInside active" onclick="openItensTabs('1tab1.1', 'tabLanches')">X-Tudo</li>
+                <li class="btnInside" onclick="openItensTabs('1tab1.2', 'tabLanches')">X-Calabresa</li>
+                <li class="btnInside" onclick="openItensTabs('1tab1.3', 'tabLanches')">X-Egg</li>
+                <li class="btnInside" onclick="openItensTabs('1tab1.4', 'tabLanches')">Americano</li>
+                <li class="btnInside" onclick="openItensTabs('1tab1.5', 'tabLanches')">X-Salada</li>
+                <li class="btnInside" onclick="openItensTabs('1tab1.6', 'tabLanches')">X-Frango</li>
+                <li class="btnInside" onclick="openItensTabs('1tab1.7', 'tabLanches')">X-Burguer</li>
+                <li class="btnInside" onclick="openItensTabs('1tab1.8', 'tabLanches')">Mistão</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="break"></div>
+
+    <div id="catLanches" class="box"></div>
+
+</div>
+
+<div id="1tab2" class="row tabLanchonete" data-aos="fade-right" style="display:none">
+
+    <div class="scroll" style="overflow-y: auto;">
+        <div style="display: flex;width: max-content;">
+            <ul class="listInside">
+                <li class="btnInside active" onclick="openItensTabs('1tab2.1', 'tabPorcoes')">Completão</li>
+                <li class="btnInside" onclick="openItensTabs('1tab2.2', 'tabPorcoes')">Frango</li>
+                <li class="btnInside" onclick="openItensTabs('1tab2.3', 'tabPorcoes')">Batata Completa</li>
+                <li class="btnInside" onclick="openItensTabs('1tab2.4', 'tabPorcoes')">Batata&Cheddar</li>
+                <li class="btnInside" onclick="openItensTabs('1tab2.5', 'tabPorcoes')">Batata&Bacon</li>
+                <li class="btnInside" onclick="openItensTabs('1tab2.6', 'tabPorcoes')">Batata Frita</li>
+                <li class="btnInside" onclick="openItensTabs('1tab2.7', 'tabPorcoes')">Frango a passarinho</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="break"></div>
+
+    <div id="catPorcoes" class="box"></div>
+
+</div>
+
+<div id="1tab3" class="row tabLanchonete" data-aos="fade-right" style="display:none">
+
+    <div class="scroll" style="overflow-y: auto;">
+        <div style="display: flex;width: max-content;">
+            <ul class="listInside">
+                <li class="btnInside active" onclick="openItensTabs('1tab3.1', 'tabSalgAssados')">Esfirra de Frango</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.2', 'tabSalgAssados')">E. carne</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.3', 'tabSalgAssados')">E. queijo&presunto</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.4', 'tabSalgAssados')">E. Frango&Catupiry</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.5', 'tabSalgAssados')">E. Frango&Cheddar</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.6', 'tabSalgAssados')">E. Calabresa&Queijo</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.7', 'tabSalgAssados')">E. Calabresa&Queijo&Cheddar</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.8', 'tabSalgAssados')">Hamburgão</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.9', 'tabSalgAssados')">Bauru</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.10', 'tabSalgAssados')">Enroladinho Salsicha</li>
+                <li class="btnInside" onclick="openItensTabs('1tab3.11', 'tabSalgAssados')">E. Salsicha Gourmet</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="break"></div>
+
+    <div id="catSalgAssados" class="box"></div>
+
+</div>
+
+<div id="1tab4" class="row tabLanchonete" data-aos="fade-right" style="display:none">
+
+    <div class="scroll" style="overflow-y: auto;">
+        <div style="display: flex;width: max-content;">
+            <ul class="listInside">
+                <li class="btnInside active" onclick="openItensTabs('1tab4.1', 'tabSalgFritos')">Coxinha</li>
+                <li class="btnInside" onclick="openItensTabs('1tab4.2', 'tabSalgFritos')">Risoles Carne</li>
+                <li class="btnInside" onclick="openItensTabs('1tab4.3', 'tabSalgFritos')">Risoles Pizza</li>
+                <li class="btnInside" onclick="openItensTabs('1tab4.4', 'tabSalgFritos')">Enroladinho Salsicha</li>
+                <li class="btnInside" onclick="openItensTabs('1tab4.5', 'tabSalgFritos')">E. Queijo&Presunto</li>
+                <li class="btnInside" onclick="openItensTabs('1tab4.6', 'tabSalgFritos')">Kibe</li>
+                <li class="btnInside" onclick="openItensTabs('1tab4.7', 'tabSalgFritos')">Steak Frango</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="break"></div>
+
+    <div id="catSalgFritos" class="box"></div>
+
+</div>
+
+<hr class="hrCustom" data-aos="fade-right">
+
+</section>
+
+<!--*************************-->
+
+<section class="menu" id="pizzaria">
+    <h3 class="heading" data-aos="fade-down"><span><i class="fas fa-pizza-slice" style="transform: rotate(-90deg); margin-right: 5px;"></i></span>Pizzaria<span><i class="fas fa-pizza-slice" style="margin-left: 5px;"></i></span></h3>
+    <br>
+    <div class="row city" data-aos="fade-right">
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('2tab1.1', 'tabPizzas')">Tradicional</li>
+                    <li class="btnInside" onclick="openItensTabs('2tab1.2', 'tabPizzas')">Calabresa</li>
+                    <li class="btnInside" onclick="openItensTabs('2tab1.3', 'tabPizzas')">Caipira</li>
+                    <li class="btnInside" onclick="openItensTabs('2tab1.4', 'tabPizzas')">Portuguesa</li>
+                    <li class="btnInside" onclick="openItensTabs('2tab1.5', 'tabPizzas')">Frango Catupiry</li>
+                    <li class="btnInside" onclick="openItensTabs('2tab1.6', 'tabPizzas')">Carne Seca</li>
+                    <li class="btnInside" onclick="openItensTabs('2tab1.7', 'tabPizzas')">Atum</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+
+        <div id="catPizzas" class="box"></div>
+
+        <div class="makePizza">
+            <div class='list' style="width: 100%; text-align: center;">
+                <h3 class="heading">Monte sua <span>Pizza</span></h3>
+            </div>
+            <div class="dropdown">
+                <button type="button" id="choosePizzaSize" class="btn">M</button>
+                <div class="dropdown-content">
+                    <button onclick="changePizzaSizeSelection('Brotinho', true)">Brotinho</button>
+                    <button onclick="changePizzaSizeSelection('Brot. Especial', true)">Brot. Especial</button>
+                    <button onclick="changePizzaSizeSelection('P')">P (4 fatias)</button>
+                    <button onclick="changePizzaSizeSelection('M')">M (6 fatias)</button>
+                    <button onclick="changePizzaSizeSelection('G')">G (8 fatias)</button>
+                    <button onclick="changePizzaSizeSelection('GG')">GG (10 fatias)</button>
+                </div>
+            </div>
+            <!--class="boxImgPizzaChoose oneFlavor"-->
+            <div class="boxImgPizzaChoose">
+                <div class="pizzaLeft">
+                    <img class="imgPizzaChoose" src="images/pizzaIconleft.png" alt="pizza">
+                    <div class="dropdown2">
+                        <button type="button" id="choosePizzaFlavorLeft" class="pizzaChosen"><p title="Tradicional">Tradicional</p></button>
+                        <div class="dropdown2-content">
+                            <button onclick="changeLeftPizzaSelection('Tradicional', 1)">Tradicional</button>
+                            <button onclick="changeLeftPizzaSelection('Calabresa', 1)">Calabresa</button>
+                            <button onclick="changeLeftPizzaSelection('Caipira', 2)">Caipira</button>
+                            <button onclick="changeLeftPizzaSelection('Portuguesa', 2)">Portuguesa</button>
+                            <button onclick="changeLeftPizzaSelection('Frango Catupiry', 2)">Frango Catupiry</button>
+                            <button onclick="changeLeftPizzaSelection('Carne Seca Muçarela', 3)">Carne Seca Muçarela</button>
+                            <button onclick="changeLeftPizzaSelection('Carne Seca Catupiry', 3)">Carne Seca Catupiry</button>
+                            <button onclick="changeLeftPizzaSelection('Carne Seca Cheddar', 3)">Carne Seca Cheddar</button>
+                            <button onclick="changeLeftPizzaSelection('Atum', 4)">Atum</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizzaRight">
+                    <img class="imgPizzaChoose" src="images/pizzaIconright.png" alt="pizza">
+                    <div class="dropdown3">
+                        <button type="button" id="choosePizzaFlavorRight" class="pizzaChosen"><p title="Frango catupiry">Frango catupiry</p></button>
+                        <div class="dropdown3-content">
+                            <button onclick="changeRightPizzaSelection('Tradicional', 1)">Tradicional</button>
+                            <button onclick="changeRightPizzaSelection('Calabresa', 1)">Calabresa</button>
+                            <button onclick="changeRightPizzaSelection('Caipira', 2)">Caipira</button>
+                            <button onclick="changeRightPizzaSelection('Portuguesa', 2)">Portuguesa</button>
+                            <button onclick="changeRightPizzaSelection('Frango Catupiry', 2)">Frango Catupiry</button>
+                            <button onclick="changeRightPizzaSelection('Carne Seca Muçarela', 3)">Carne Seca Muçarela</button>
+                            <button onclick="changeRightPizzaSelection('Carne Seca Catupiry', 3)">Carne Seca Catupiry</button>
+                            <button onclick="changeRightPizzaSelection('Carne Seca Cheddar', 3)">Carne Seca Cheddar</button>
+                            <button onclick="changeRightPizzaSelection('Atum', 4)">Atum</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="containerCheckBoxPizza">
+                <div class="divEmojiHand">
+                    &#128073;
+                </div>
+                <div class="checkBoxPizza">
+                    <input type="checkbox" id="takeout" name="takeout" onchange="toggleCheckbox(this)">
+                    <label for="takeout">Para levar</label>
+                </div>
+            </div>
+            <div class='boxPriceNewPizza'>
+                <text id="idPriceMakedPizza" class="priceNewPizza">R$ 23,00</text>
+                <button
+                style="margin-left: 0"
+                class="btnCart btnCart-small addToCart"
+                onclick="chooseMakedPizza()">
+                  <i class="fas fa-cart-plus"></i>
+                  Adicionar item
+                </button>
+            </div>
+            <div class="noticePizzaDays">
+                Pizza somente aos <b>sábados</b> e <b>domingos</b> à partir das <b>18:00hrs</b>.
+            </div>
+        </div>
+    </div>
+    <hr class="hrCustom" data-aos="fade-right">
+</section>
+
+<!--*************************-->
+
+<section class="menu" id="sorveteria">
+    <h3 class="heading" data-aos="fade-down"><span><i class="fas fa-ice-cream" style="transform: rotate(-30deg);"></i></span>Sorveteria<span><i class="fas fa-ice-cream" style="transform: rotate(30deg);"></i></span></h3>
+    <br>
+    <ul class="list" data-aos="fade-down">
+        <li class="btn active" onclick="openItensTabs('3tab1', 'tabSorveteria')">Açaís</li>
+        <li class="btn" onclick="openItensTabs('3tab2', 'tabSorveteria')">MilkShakes</li>
+        <li class="btn" onclick="openItensTabs('3tab3', 'tabSorveteria')">Sorvetes</li>
+    </ul>
+
+    <div id="3tab1" class="row tabSorveteria" data-aos="fade-right">
+
+        <!--
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('3tab1.1', 'tabAcais')">PP</li>
+                    <li class="btnInside" onclick="openItensTabs('3tab1.2', 'tabAcais')">P</li>
+                    <li class="btnInside" onclick="openItensTabs('3tab1.3', 'tabAcais')">M</li>
+                    <li class="btnInside" onclick="openItensTabs('3tab1.4', 'tabAcais')">G</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+        -->
+    
+        <div id="catAcais" class="box"></div>
+    
+    </div>
+
+    <div id="3tab2" class="row tabSorveteria" data-aos="fade-right" style="display:none">
+    
+        <div id="catMilkShakes" class="box"></div>
+    
+    </div>
+
+    <div id="3tab3" class="row tabSorveteria" data-aos="fade-right" style="display:none">
+
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('3tab3.1', 'tabSorvetes')">Bola</li>
+                    <li class="btnInside" onclick="openItensTabs('3tab3.2', 'tabSorvetes')">Casquinha</li>
+                    <li class="btnInside" onclick="openItensTabs('3tab3.3', 'tabSorvetes')">Cascão</li>
+                    <li class="btnInside" onclick="openItensTabs('3tab3.4', 'tabSorvetes')">Picolé cremoso</li>
+                    <li class="btnInside" onclick="openItensTabs('3tab3.5', 'tabSorvetes')">Picolé cristalizado</li>
+                    <li class="btnInside" onclick="openItensTabs('3tab3.6', 'tabSorvetes')">Picolé casquinha</li>
+                    <li class="btnInside" onclick="openItensTabs('3tab3.7', 'tabSorvetes')">Cremosinho</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+    
+        <div id="catSorvetes" class="box"></div>
+    
+    </div>
+
+    <hr class="hrCustom" data-aos="fade-right">
+</section>
+
+<!--*************************-->
+
+<section class="menu" id="padaria">
+    <h3 class="heading" data-aos="fade-down"><span><i class="fas fa-mug-hot" style="transform: scaleX(-1); margin-right: 5px;"></i></span>Padaria<span><i class="fas fa-mug-hot" style=" margin-left: 5px;"></i></span></h3>
+    <br>
+    <ul class="list" data-aos="fade-down">
+        <li class="btn active" onclick="openItensTabs('4tab1', 'tabPadaria')">Pães</li>
+        <li class="btn" onclick="openItensTabs('4tab2', 'tabPadaria')">Bolos</li>
+        <li class="btn" onclick="openItensTabs('4tab3', 'tabPadaria')">Diversos</li>
+    </ul>
+
+    <div id="4tab1" class="row tabPadaria" data-aos="fade-right">
+
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('4tab1.1', 'tabPaes')">Doce</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab1.2', 'tabPaes')">Sal</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab1.3', 'tabPaes')">Rosca</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab1.4', 'tabPaes')">Sonho</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab1.5', 'tabPaes')">Donut</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+    
+        <div id="catPaes" class="box"></div>
+    
+    </div>
+
+    <div id="4tab2" class="row tabPadaria" data-aos="fade-right" style="display:none">
+
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('4tab2.1', 'tabBolos')">Prima</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab2.2', 'tabBolos')">Formigueiro</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab2.3', 'tabBolos')">Milho</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab2.4', 'tabBolos')">Arroz G</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab2.5', 'tabBolos')">Arroz P</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab2.6', 'tabBolos')">Brevidade G</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab2.7', 'tabBolos')">Brevidade P</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab2.8', 'tabBolos')">Cenoura</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+    
+        <div id="catBolos" class="box"></div>
+    
+    </div>
+
+    <div id="4tab3" class="row tabPadaria" data-aos="fade-right" style="display:none">
+
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('4tab3.1', 'tabDiversosPad')">Chimango</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab3.2', 'tabDiversosPad')">Pão de queijo</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab3.3', 'tabDiversosPad')">Bolachinha</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab3.4', 'tabDiversosPad')">Doce de Leite</li>
+                    <li class="btnInside" onclick="openItensTabs('4tab3.5', 'tabDiversosPad')">Avoador</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+    
+        <div id="catDiversosPad" class="box"></div>
+    
+    </div>
+
+    <div style="display: flex; justify-content: center;" data-aos="fade-right">
+        <a
+        href="https://api.whatsapp.com/send?phone=+5577991998770&text=Olá, vim do setor 'Padaria' do site."
+        target="_blank">
+            <button
+            class="btn">
+                <i class="fab fa-whatsapp"></i>
+                Encomendar
+            </button>
+        </a>
+    </div>
+
+    <hr class="hrCustom" data-aos="fade-right">
+</section>
+
+<section class="menu" id="outros" style="margin-bottom: 8.5rem;">
+    <h3 class="heading" data-aos="fade-down">&#128523;E muito mais!&#128523;</h3>
+    <br>
+    
+    <ul class="list" data-aos="fade-down">
+        <li class="btn active" onclick="openItensTabs('5tab1', 'tabOutros')">Bomboniere</li>
+        <li class="btn" onclick="openItensTabs('5tab2', 'tabOutros')">Salgados Festa</li>
+        <li class="btn" onclick="openItensTabs('5tab3', 'tabOutros')">Bebidas</li>
+        <li class="btn" onclick="openItensTabs('5tab4', 'tabOutros')">Gelo</li>
+    </ul>
+
+    <div id="5tab1" class="row tabOutros" data-aos="fade-right">
+    
+        <div class="image" data-aos="fade-left">
+            <img src="https://i.ibb.co/sgWBhGb/doces.jpg" alt="Bomboniere">
+        </div>
+  
+        <div class="content">
+            <div class="info">
+                <h3> <span>01.</span>Bomboniere diversificada!</h3>
+                <p>Chocolates, Trident, Halls, M&M's, Bombons, Doces, Salgadinhos e muito + &#127852;&#127851;&#127850;&#127853;</p>
+                <a
+                href="https://api.whatsapp.com/send?phone=+5577991998770&text=Olá, vim do setor 'Bomboniere' do site."
+                target="_blank"
+                class="linkFlavors">
+                    <button
+                    class="btn btnWhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                        Saiba +
+                    </button>
+                </a>
+            </div>
+        </div>
+    
+    </div>
+
+    <div id="5tab2" class="row tabOutros" data-aos="fade-right" style="display:none">
+    
+        <div class="image" data-aos="fade-left">
+            <img src="https://i.ibb.co/M9P0Z2B/mini-Salgados.jpg" alt="ParaFesta">
+        </div>
+  
+        <div class="content">
+            <div class="info">
+                <h3> <span>02.</span>Salgados para Festas</h3>
+                <p>
+                    <b>**TABELA DE PREÇOS**</b>
+                    <br><br>
+                    <b>> Mini Salgados Fritos:</b>
+                    <br>
+                    <i>(Coxinha - bolinho de queijo - bolinho de carne - kibe)</i>
+                    <br>
+                    - 100 unidades: <b>R$70,00</b>
+                    <br>
+                    - 200 unidades (do mesmo salgado): <b>R$130,00</b><br>
+                    - 200 unidades (salgados diferentes): <b>R$140,00</b>
+                    <br>
+                    - 300 unidades (do mesmo salgado): <b>R$180,00</b><br>
+                    - 300 unidades (salgados diferentes): <b>R$210,00</b>
+                    <br><br>
+
+                    <b>> Mini-Mini coxinhas (são bem menorzinhas):</b>
+                    <br>
+                    - 500 unidades: <b>R$150,00</b>
+                    <br><br>
+
+                    <b>> Mini Salgados Assados:</b>
+                    <br>
+                    <i>(Esfirra de carne - esfirra de frango - esfirra de queijo e presunto - enroladinho de salsicha)</i>
+                    <br>
+                    - 100 unidades: <b>R$70,00</b>
+                    <br><br>
+
+                    <b>> Tortas:</b>
+                    <br>
+                    <i>(Torta de frango - torta de frios)</i>
+                    <br>
+                    - Forma: <b>R$45,00</b>
+                </p>
+                <a
+                href="https://api.whatsapp.com/send?phone=+5577991998770&text=Olá, gostaria de fazer uma encomenda."
+                target="_blank">
+                    <button
+                    class="btn btnWhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                        Encomendar
+                    </button>
+                </a>
+                <p>
+                    <b>*</b><i>Se possível, faça sua encomenda com no mínimo uma semana de antecedência.</i>
+                </p>
+            </div>
+        </div>
+    
+    </div>
+
+    <div id="5tab3" class="row tabOutros" data-aos="fade-right" style="display:none">
+
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('5tab3.1', 'tabBebidasOutros')">Sem álcool</li>
+                    <li class="btnInside" onclick="openItensTabs('5tab3.2', 'tabBebidasOutros')">Alcoólicas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break"></div>
+    
+        <div id="5tab3.1" class="row tabBebidasOutros" data-aos="fade-righ
+        t">
+    
+            <div class="image" data-aos="fade-left">
+                <img src="https://i.ibb.co/X3mCXFZ/refrigerantes.jpg" alt="bebidas">
+            </div>
+      
+            <div class="content">
+                <div class="info">
+                    <h3> <span>03.</span>Bebidas refrescantes</h3>
+                    <p>Sucos, refrigerantes, energéticos, achocolatados e +</p>
+                    <a
+                    href="https://api.whatsapp.com/send?phone=+5577991998770&text=Olá, vim do setor 'Bebidas sem álcool' do site."
+                    target="_blank"
+                    class="linkFlavors">
+                        <button
+                        class="btn btnWhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                            Saiba +
+                        </button>
+                    </a>
+                </div>
+            </div>
+        
+        </div>
+
+        <div id="5tab3.2" class="row tabBebidasOutros" data-aos="fade-right" style="display:none">
+    
+            <div class="image" data-aos="fade-left">
+                <img src="https://i.ibb.co/my1kZNY/whiskey.jpg" alt="ParaFesta">
+            </div>
+      
+            <div class="content">
+                <div class="info">
+                    <h3> <span>04.</span>Bebidas alcoólicas&#128286;</h3>
+                    <p>Whisky, Vodca, Vinho, Cerveja, Cachaça e Torre de cerveja</p>
+                    <a
+                    href="https://api.whatsapp.com/send?phone=+5577991998770&text=Olá, vim do setor 'Bebidas alcoólicas' do site."
+                    target="_blank"
+                    class="linkFlavors">
+                        <button
+                        class="btn btnWhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                            Saiba +
+                        </button>
+                    </a>
+                </div>
+            </div>
+        
+        </div>
+    
+    </div>
+
+    <div id="5tab4" class="row tabOutros" data-aos="fade-right" style="display:none">
+    
+        <div class="image" data-aos="fade-left">
+            <img src="https://i.ibb.co/JRGtpS8/icephoto.jpg" alt="Gelo">
+        </div>
+  
+        <div class="content">
+            <div class="info">
+                <h3><span>05.</span>Gelo</h3>
+                <p>Saco de gelo (1,4Kg)</p>
+                <button
+                class="btnCart btnCart-small addToCart"
+                onclick="sentIce()">
+                    <i class="fas fa-cart-plus"></i>
+                    Adicionar item
+                </button>
+            </div>
+        </div>
+    
+    </div>
+
+    <!--<hr class="hrCustom" data-aos="fade-right">-->
+</section>
+
+<!-- footer section starts  -->
+
+<section class="footer" id="contato">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Links de contato</h3>
+            <p> <a
+                href="https://api.whatsapp.com/send?phone=+5577991998770&text=Olá!"
+                target="_blank">
+                <i class="fab fa-whatsapp"></i></i> (77)9.9199-8770
+            </a></p>
+            <p> <a href="https://www.instagram.com/sorveteriachaplin/" target="_blank"><i class="fab fa-instagram"></i> @sorveteriachaplin</a></p>
+            <p> <a href="https://goo.gl/maps/22bzChkjJNcdHrW57" target="_blank"><i class="fas fa-map-marker-alt"></i> Ibiajara - BA (Centro)</a></p>
+            <p> <a href="mailto: manoelprado.aecjr@gmail.com" target="_blank"><i class="fas fa-envelope"></i> manoelprado.aecjr@gmail.com</a></p>
+        </div>
+
+    </div>
+
+    <h1 class="credit"><a href="https://easypcformat.com.br/" target="_blank">©2021 easyPCFormat.</a> Manoel Prado <p>Todos os direitos reservados</p></h1>
+
+</section>
+
+<!-- footer section ends -->
+
+
+<!-- aos js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+<!-- initializing aos  -->
+
+<script>
+
+    AOS.init({
+        delay:400,
+        duration:1000
+    })
+
+</script>
+
+<script>
+    function openLanchonete(cityName) {
+      var i;
+      var x = document.getElementsByClassName("tabLanchonete");
+      for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+      }
+      document.getElementById(cityName).style.display = "flex";  
+    }
+</script>
+
+<script>
+    function openItensTabs(prodName, tabName) {
+      var i;
+      var x = document.getElementsByClassName(tabName);
+      for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+      }
+      document.getElementById(prodName).style.display = "flex";  
+    }
+</script>
+
+</body>
+</html>

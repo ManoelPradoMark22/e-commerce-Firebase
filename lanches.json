@@ -1,0 +1,249 @@
+{
+  "sections": [
+    {
+      "name": "lanchonete",
+      "subsections": [
+        {
+          "name": "Lanches",
+          "products": [
+            {
+              "id": "1tab1.1",
+              "number": 1,
+              "name":"X-Tudo",
+              "description": "Hambúrguer, bacon, salsicha, ovo, queijo, presunto, catupiry, alface, tomate, milho e molho.",
+              "price":"R$ 13,00",
+              "priceNumb": 13.00,
+              "img": "lanchesImages.imgXtudo",
+              "display": "display:flex"
+            },
+            {
+              "id": "1tab1.2",
+              "number": 2,
+              "name":"X-Calabresa",
+              "description": "Hambúrguer, calabresa, queijo, cebola, alface, tomate e molho.",
+              "price":"R$ 10,00",
+              "priceNumb": 10.00,
+              "img": "lanchesImages.imgXcalabresa",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab1.3",
+              "number": 3,
+              "name":"X-Egg",
+              "description": "Hambúrguer, ovo, queijo, alface, tomate e molho.",
+              "price":"R$ 9,00",
+              "priceNumb": 9.00,
+              "img": "lanchesImages.imgXegg",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab1.4",
+              "number": 4,
+              "name":"Americano",
+              "description": "Queijo, presunto, ovo, alface e tomate.",
+              "price":"R$ 7,50",
+              "priceNumb": 7.50,
+              "img": "lanchesImages.imgAmericano",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab1.5",
+              "number": 5,
+              "name":"X-Salada",
+              "description": "Hambúrguer, alface, tomate e milho.",
+              "price":"R$ 7,00",
+              "priceNumb": 7.00,
+              "img": "lanchesImages.imgXsalada",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab1.6",
+              "number": 6,
+              "name":"X-Frango",
+              "description": "Peito de frango, queijo, alface, tomate e molho.",
+              "price":"R$ 7,00",
+              "priceNumb": 7.00,
+              "img": "lanchesImages.imgXfrango",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab1.7",
+              "number": 7,
+              "name":"X-Burguer",
+              "description": "Hambúrguer, bacon, salsicha, ovo, queijo, presunto, catupiry, alface, tomate, milho e molho.",
+              "price":"R$ 6,00",
+              "priceNumb": 6.00,
+              "img": "lanchesImages.imgXburguer",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab1.8",
+              "number": 8,
+              "name":"Mistão",
+              "description": "Hambúrguer, queijo e molho.",
+              "price":"R$ 5,00",
+              "priceNumb": 5.00,
+              "img": "lanchesImages.imgMistao",
+              "display": "display:none"
+            }
+          ] 
+        },
+        {
+          "name": "Porções",
+          "products": [
+            {
+              "id": "1tab2.1",
+              "number": 1,
+              "name":"Frango e Batata com Cheddar e Bacon",
+              "available": true,
+              "description": "sdk dask dajks k",
+              "price":"R$ 28,00",
+              "priceNumb": 28.00,
+              "img": "porcoesImages.imgCompletao",
+              "display": "display:flex"
+            },
+            {
+              "id": "1tab2.2",
+              "number": 2,
+              "name":"Frango",
+              "available": true,
+              "description": "sdk dask dajks k",
+              "price":"R$ 16,00",
+              "priceNumb": 16.00,
+              "img": "porcoesImages.imgFrango",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab2.3",
+              "number": 3,
+              "name":"Batata com Cheddar e Bacon",
+              "available": true,
+              "description": "sdk dask dajks k",
+              "price":"R$ 12,00",
+              "priceNumb": 12.00,
+              "img": "porcoesImages.imgBatataChedBac",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab2.4",
+              "number": 4,
+              "name":"Batata com Cheddar",
+              "available": true,
+              "description": "sdk dask dajks k",
+              "price":"R$ 10,00",
+              "priceNumb": 10.00,
+              "img": "porcoesImages.imgBatataCheddar",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab2.5",
+              "number": 5,
+              "name":"Batata com Bacon",
+              "available": true,
+              "description": "sdk dask dajks k",
+              "price":"R$ 10,00",
+              "priceNumb": 10.00,
+              "img": "porcoesImages.imgBatataBacon",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab2.6",
+              "number": 6,
+              "name":"Batata Frita",
+              "available": true,
+              "description": "sdk dask dajks k",
+              "price":"R$ 8,00",
+              "priceNumb": 8.00,
+              "img": "porcoesImages.imgBatata",
+              "display": "display:none"
+            },
+            {
+              "id": "1tab2.7",
+              "number": 7,
+              "name":"Frango a passarinho",
+              "available": false,
+              "description": "sdk dask dajks k",
+              "price":"R$ 22,00",
+              "priceNumb": 22.00,
+              "img": "porcoesImages.imgFrangoPass",
+              "display": "display:none"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pizzaria",
+      "subsections": [
+        {
+          "name": "Pizzaria",
+          "products": [
+            {
+              "id": "2tab1.1",
+              "number": 1,
+              "name":"Tradicional",
+              "description": "Queijo, presunto, milho e tomate.",
+              "img": "pizzasImages.imgTradicional",
+              "display": "display:flex",
+              "prices": "pizzaPrices1"
+            },
+            {
+              "id": "2tab1.2",
+              "number": 2,
+              "name":"Calabresa",
+              "description": "Queijo, calabresa e cebola.",
+              "img": "pizzasImages.imgCalabresa",
+              "display": "display:none",
+              "prices": "pizzaPrices1"
+            },
+            {
+              "id": "2tab1.3",
+              "number": 3,
+              "name":"Caipira",
+              "description": "Queijo, frango desfiado, milho, tomate e cebola.",
+              "img": "pizzasImages.imgCaipira",
+              "display": "display:none",
+              "prices": "pizzaPrices2"
+            },
+            {
+              "id": "2tab1.4",
+              "number": 4,
+              "name":"Portuguesa",
+              "description": "Queijo, presunto, ovo, tomate, azeitona e cebola.",
+              "img": "pizzasImages.imgPortuguesa",
+              "display": "display:none",
+              "prices": "pizzaPrices2"
+            },
+            {
+              "id": "2tab1.5",
+              "number": 5,
+              "name":"Frango Catupiry",
+              "description": "Queijo, frango e catupiry.",
+              "img": "pizzasImages.imgFrangCatup",
+              "display": "display:none",
+              "prices": "pizzaPrices2"
+            },
+            {
+              "id": "2tab1.6",
+              "number": 6,
+              "name":"Carne Seca",
+              "description": "Carne seca, azeitona, cebola + (muçarela ou catupiry ou cheddar)",
+              "img": "pizzasImages.imgCarneSeca",
+              "display": "display:none",
+              "prices": "pizzaPrices3"
+            },
+            {
+              "id": "2tab1.7",
+              "number": 7,
+              "name":"Atum",
+              "description": "Atum, muçarela, azeitona e cebola.",
+              "img": "pizzasImages.imgAtum",
+              "display": "display:none",
+              "prices": "pizzaPrices4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
