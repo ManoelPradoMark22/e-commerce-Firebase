@@ -14,13 +14,13 @@ const firebaseApp = initializeApp({
 
 const db = getDatabase(firebaseApp);
 const starCountRef = ref(db, 'sections/');
-var arrFB = [];
+
 /*onValue(starCountRef, (snapshot) => {
   const data = snapshot.val();
 }); */
 
 function showArr(arr) {
-  arrFB = arr;
+ 
 }
 
 async function loadFirebase() {
@@ -30,5 +30,3 @@ async function loadFirebase() {
 }
 
 await loadFirebase();
-
-export default arrFB;

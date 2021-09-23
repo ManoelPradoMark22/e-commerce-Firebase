@@ -1,56 +1,14 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
-import { getDatabase, ref, onValue} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
-
-const firebaseApp = initializeApp({
-  apiKey: "AIzaSyBjp1xZR6T0fBs4uYST8PNV7rC2rUxNjpg",
-  authDomain: "e-commerce-3c41b.firebaseapp.com",
-  databaseURL: "https://e-commerce-3c41b-default-rtdb.firebaseio.com",
-  projectId: "e-commerce-3c41b",
-  storageBucket: "e-commerce-3c41b.appspot.com",
-  messagingSenderId: "352196438207",
-  appId: "1:352196438207:web:40360967b69b7bf4093e0a",
-  measurementId: "G-86PHKPHGWE"
-});
-
-const db = getDatabase(firebaseApp);
-const starCountRef = ref(db, 'sections/');
-
-/*onValue(starCountRef, (snapshot) => {
-  const data = snapshot.val();
-}); */
-
-function showArr(arr) {
-  console.log(arr);
-
-  document.getElementById('testeFB').innerHTML = arr.map(prod => 
-    `<div>
-      ${prod.name}
-      ${prod.subsections.map(sub => 
-        `
-          <div>${sub.name}</div>
-          ${sub.products.map(prod =>
-            `
-            <button type="button" class="btnChrome" ${prod.available ? '' : 'disabled'}>${prod.name}</button> 
-            `).join('')}
-        `).join('')}
-    </div>`
-    ).join('')
-}
-
-async function loadFirebase() {
-  await onValue(starCountRef, (snapshot) => {
-    showArr(snapshot.val());
-  });
-}
-
-await loadFirebase();
-
+import lanchesArray from './lanches.js'
 //begin code
 
 let productsInCart = JSON.parse(sessionStorage.getItem('shoppingCart'));
 if(!productsInCart){
 	productsInCart = [];
 }
+
+const arrLanches = lanchesArray();
+
+console.log(arrLanches);
 
 const parentElement = document.querySelector('#buyItems');
 
@@ -226,7 +184,7 @@ function sentIce(){
   addItemToCart(objIce);
 }
 
-function addItemToCart(prodObj) {
+window.addItemToCart = function addItemToCart(prodObj) {
   for (let i = 0; i < productsInCart.length; i++) {
 		if (productsInCart[i].id == prodObj.id) {
 			productsInCart[i].count = productsInCart[i].count + 1;
