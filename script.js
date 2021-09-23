@@ -48,12 +48,12 @@ console.log(fbArray);
 
 const parentElement = document.querySelector('#buyItems');
 
-function convertToReal(value) {
+window.convertToReal = function convertToReal(value) {
   const valueConverted = value.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
   return valueConverted;
 }
 
-function clearsessionStorage() {
+window.clearsessionStorage = function clearsessionStorage() {
   productsInCart = [];
   updateShoppingCartHTML();
 }
@@ -208,7 +208,7 @@ const updateShoppingCartHTML = function () {  // 3
 	}
 }
 
-function sentIce(){
+window.sentIce = function sentIce(){
   let objIce = {
     id: '5tab4',
     name: 'Gelo',
@@ -233,7 +233,7 @@ window.addItemToCart = function addItemToCart(prodObj) {
   updateShoppingCartHTML();
 }
 
-function addAcaiToCart() {
+window.addAcaiToCart = function addAcaiToCart() {
   let adittionalsString = '';
 
   additionals.map(add => {
@@ -267,7 +267,7 @@ function addAcaiToCart() {
   updateShoppingCartHTML();
 }
 
-function addMSToCart() {
+window.addMSToCart = function addMSToCart() {
   let adittionalsStringMS = '';
 
   additionalsMilkShake.map(add => {
@@ -302,7 +302,7 @@ function addMSToCart() {
   updateShoppingCartHTML();
 }
 
-function changeCountOfItens(idProd, IsIncrease) {
+window.changeCountOfItens = function changeCountOfItens(idProd, IsIncrease) {
   for (let i = 0; i < productsInCart.length; i++) {
 		if (productsInCart[i].id == idProd) {
       if (IsIncrease) {
@@ -1244,7 +1244,7 @@ var additionals = [
   }
 ]
 
-function changeSelect(id) {
+window.changeSelect = function changeSelect(id) {
   var contador = 0;
   var valor = 0;
   var simpleAdd = true;
@@ -1305,7 +1305,7 @@ function changeSelect(id) {
   }
 }
 
-function changeSelectedSizeAcai(sizeId) {
+window.changeSelectedSizeAcai = function changeSelectedSizeAcai(sizeId) {
   var priceSize = 5.00;
   var newName = 'Açaí';
   var imgPath = sorveteriaImages.imgAcaiPP;
@@ -1447,7 +1447,7 @@ var additionalsMilkShake = [
   }
 ]
 
-function changeSelectedMS(id){
+ window.changeSelectedMS = function changeSelectedMS(id){
   var valorMS = 0;
   var wasSelectedMS = true;
 
@@ -1483,7 +1483,7 @@ function changeSelectedMS(id){
 
 }
 
-function changeSelectedSizeMS(sizeId) {
+window.changeSelectedSizeMS = function changeSelectedSizeMS(sizeId) {
   var priceSizeMS = 5.00;
   var newNameMS = 'Milk-Shake';
   var imgPathMS = sorveteriaImages.imgMSP;
@@ -2000,7 +2000,7 @@ let isToTakeOut = false;
 
 /*changing sizes*/
 
-function changePizzaSizeSelection(size, isJustOne){
+window.changePizzaSizeSelection = function changePizzaSizeSelection(size, isJustOne){
   document.getElementById("choosePizzaSize").innerHTML = size;
   sizePizzaSelected = size;
   
@@ -2026,7 +2026,7 @@ function changePizzaSizeSelection(size, isJustOne){
   document.getElementById('idPriceMakedPizza').innerHTML = convertToReal(priceMakedPizza);
 }
 
-function changePricesByChangingSize(isEqual, isLeft, price) {
+window.changePricesByChangingSize = function changePricesByChangingSize(isEqual, isLeft, price) {
   if (isEqual){
     priceLeftPizzaSelected = price;
     priceRightPizzaSelected = price;
@@ -2037,7 +2037,7 @@ function changePricesByChangingSize(isEqual, isLeft, price) {
   }
 }
 
-function calculateMakedPizzaValueChangingSize(isEqual, isLeft){
+window.calculateMakedPizzaValueChangingSize = function calculateMakedPizzaValueChangingSize(isEqual, isLeft){
   switch (isLeft ? typeLeftPizzaSelected : typeRightPizzaSelected) {
     case 1:
       pizzaPrices1.map(price => {
@@ -2078,7 +2078,7 @@ function calculateMakedPizzaValueChangingSize(isEqual, isLeft){
 
 /*changing flavors*/
 
-function changePrices(isLeft, price, isJustOne) {
+window.changePrices = function changePrices(isLeft, price, isJustOne) {
   if (isJustOne) {
     priceRightPizzaSelected = price;
     priceLeftPizzaSelected = price;
@@ -2091,7 +2091,7 @@ function changePrices(isLeft, price, isJustOne) {
   document.getElementById('idPriceMakedPizza').innerHTML = convertToReal(priceMakedPizza);
 }
 
-function calculateMakedPizzaValue(type, isLeft, isJustOne){
+window.calculateMakedPizzaValue = function calculateMakedPizzaValue(type, isLeft, isJustOne){
   switch (type) {
     case 1:
       pizzaPrices1.map(price => {
@@ -2130,14 +2130,14 @@ function calculateMakedPizzaValue(type, isLeft, isJustOne){
   }
 }
 
-function changeLeftPizzaSelection(flavor,type){
+window.changeLeftPizzaSelection = function changeLeftPizzaSelection(flavor,type){
   document.getElementById("choosePizzaFlavorLeft").innerHTML = `<p title="${flavor}">${flavor}</p>`;
   flavorLeftPizzaSelected = flavor;
   typeLeftPizzaSelected = type;
   calculateMakedPizzaValue(type, true);
 }
 
-function changeRightPizzaSelection(flavor, type){
+window.changeRightPizzaSelection = function (flavor, type){
   document.getElementById("choosePizzaFlavorRight").innerHTML = `<p title="${flavor}">${flavor}</p>`;
   flavorRightPizzaSelected = flavor;
   typeRightPizzaSelected = type;
@@ -2153,11 +2153,11 @@ function changeRightPizzaSelection(flavor, type){
   
 }
 
-function toggleCheckbox(element) {
+window.toggleCheckbox = function toggleCheckbox(element) {
   isToTakeOut = element.checked;
 }
 
-function chooseMakedPizza(){
+window.chooseMakedPizza = function chooseMakedPizza(){
   let stringLevar = isToTakeOut ? ' - [levar]' : '';
 
   let stringFlavor = 
