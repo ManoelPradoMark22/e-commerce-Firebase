@@ -24,6 +24,7 @@ let fbArray = [];
 
 function showArr(arr) {
  fbArray = arr;
+ /*AQUI VOU FAZER OS MAPS DAS SEÇÕES! */
 }
 
 async function loadFirebase() {
