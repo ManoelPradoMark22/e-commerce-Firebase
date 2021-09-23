@@ -14,13 +14,14 @@ const firebaseApp = initializeApp({
 });
 
 const db = getDatabase(firebaseApp);
-const starCountRef = ref(db, 'sections/');
+const starCountRef = ref(db);
 
 /*onValue(starCountRef, (snapshot) => {
   const data = snapshot.val();
 }); */
 
 let fbArray = [];
+
 
 function showArr(arr) {
  fbArray = arr;
@@ -30,6 +31,57 @@ function showArr(arr) {
 async function loadFirebase() {
   await onValue(starCountRef, (snapshot) => {
     showArr(snapshot.val());
+    const adittionals = snapshot.val().adittionals;
+    document.getElementById('catAcais').innerHTML = catAcais.map(prod => 
+      `<div>
+        <div id="${prod.id}" class="row tabAcais" data-aos="fade-right" style="${prod.display}">
+          <div class="image" data-aos="fade-left">
+              <img id="imgAcai" src="${prod.img}" alt="${prod.name}">
+          </div>
+    
+          <div class="content">
+              <div class="info">
+                  <h3 id="nameH3Acai"> <span>0${prod.number}.</span> ${prod.name}</h3>
+                  <text id="idChangePriceAcai" class="priceCatalog">${convertToReal(prod.priceTotalAcai)}</text>
+                  <p>${prod.description}</p>
+                  <div class="boxManyPrices boxAcaiSizes">
+                    <div id="sizeAcaiPP" class="manyPrices acaiSizeInside active" onclick="changeSelectedSizeAcai(1)">
+                      <h3 class="headerManyPrices">PP</h3>
+                      <div class="bodyManyPrices">250ml</div>
+                    </div>
+                    <div id="sizeAcaiP" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(2)">
+                      <h3 class="headerManyPrices">P</h3>
+                      <div class="bodyManyPrices">300ml</div>
+                    </div>
+                    <div id="sizeAcaiM" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(3)">
+                      <h3 class="headerManyPrices">M</h3>
+                      <div class="bodyManyPrices">400ml</div>
+                    </div>
+                    <div id="sizeAcaiG" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(4)">
+                      <h3 class="headerManyPrices">G</h3>
+                      <div class="bodyManyPrices">500ml</div>
+                    </div>
+                  </div>
+                  <div class="boxAdittionals">
+                    ${adittionals.map(add =>
+                      `
+                        <button type="button" id=${add.idAddName} class="adittional ${add.selected ? 'active' : ''}" ${add.available ? '' : 'disabled'} onClick="changeSelect(${add.id})">${add.name}</button>
+                      `
+                    ).join('')}
+                  </div>
+                  <button
+                      class="btnCart btnCart-small addToCart"
+                      data-product-id=${prod.id}
+                      style="margin-top: 1rem"
+                      onclick="addAcaiToCart()">
+                        <i class="fas fa-cart-plus"></i>
+                        Adicionar item
+                  </button>
+              </div>
+          </div>
+        </div>
+      </div>`
+    ).join('')
   });
 }
 
@@ -1151,105 +1203,13 @@ var catAcais = [
   }
 ]
 
-var additionals = [
-  {
-    id: 1,
-    name: 'Banana',
-    idAddName: 'addBanana',
-    available: true,
-    price: 'R$1,00',
-    value: 1.00,
-    selected: true,
-    fourFree: true
-  },
-  {
-    id: 2,
-    name: 'Morango',
-    idAddName: 'addMorango',
-    available: false,
-    price: 'R$1,00',
-    value: 1.00,
-    selected: false,
-    fourFree: true
-  },
-  {
-    id: 3,
-    name: 'Granola',
-    idAddName: 'addGranola',
-    available: true,
-    price: 'R$1,00',
-    value: 1.00,
-    selected: true,
-    fourFree: true
-  },
-  {
-    id: 4,
-    name: 'Paçoca',
-    idAddName: 'addPacoca',
-    available: true,
-    price: 'R$1,00',
-    value: 1.00,
-    selected: false,
-    fourFree: true
-  },
-  {
-    id: 5,
-    name: 'Leite Cond.',
-    idAddName: 'addLeiteCond',
-    available: true,
-    price: 'R$1,00',
-    value: 1.00,
-    selected: true,
-    fourFree: true
-  },
-  {
-    id: 6,
-    name: 'Leite em pó',
-    idAddName: 'addLeitePo',
-    available: true,
-    price: 'R$1,00',
-    value: 1.00,
-    selected: true,
-    fourFree: true
-  },
-  {
-    id: 7,
-    name: 'Amendoim',
-    idAddName: 'addAmendoim',
-    available: true,
-    price: 'R$1,00',
-    value: 1.00,
-    selected: false,
-    fourFree: true
-  },
-  {
-    id: 8,
-    name: 'Nutella',
-    idAddName: 'addNutella',
-    available: true,
-    price: 'R$2,00',
-    value: 2.00,
-    selected: false,
-    fourFree: false
-  },
-  {
-    id: 9,
-    name: 'Ovomaltine',
-    idAddName: 'addOvomaltine',
-    available: true,
-    price: 'R$2,00',
-    value: 2.00,
-    selected: false,
-    fourFree: false
-  }
-]
-
 window.changeSelect = function changeSelect(id) {
+  console.log('aqui change select');
   var contador = 0;
   var valor = 0;
   var simpleAdd = true;
   var wasSelected = true;
-  additionals.map(add => {
+  fbArray.adittionals.map(add => {
     if (add.id === id) {
       valor = add.value;
       simpleAdd = add.fourFree;
@@ -1352,56 +1312,7 @@ window.changeSelectedSizeAcai = function changeSelectedSizeAcai(sizeId) {
 }
 
 
-document.getElementById('catAcais').innerHTML = catAcais.map(prod => 
-  `<div>
-    <div id="${prod.id}" class="row tabAcais" data-aos="fade-right" style="${prod.display}">
-      <div class="image" data-aos="fade-left">
-          <img id="imgAcai" src="${prod.img}" alt="${prod.name}">
-      </div>
 
-      <div class="content">
-          <div class="info">
-              <h3 id="nameH3Acai"> <span>0${prod.number}.</span> ${prod.name}</h3>
-              <text id="idChangePriceAcai" class="priceCatalog">${convertToReal(prod.priceTotalAcai)}</text>
-              <p>${prod.description}</p>
-              <div class="boxManyPrices boxAcaiSizes">
-                <div id="sizeAcaiPP" class="manyPrices acaiSizeInside active" onclick="changeSelectedSizeAcai(1)">
-                  <h3 class="headerManyPrices">PP</h3>
-                  <div class="bodyManyPrices">250ml</div>
-                </div>
-                <div id="sizeAcaiP" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(2)">
-                  <h3 class="headerManyPrices">P</h3>
-                  <div class="bodyManyPrices">300ml</div>
-                </div>
-                <div id="sizeAcaiM" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(3)">
-                  <h3 class="headerManyPrices">M</h3>
-                  <div class="bodyManyPrices">400ml</div>
-                </div>
-                <div id="sizeAcaiG" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(4)">
-                  <h3 class="headerManyPrices">G</h3>
-                  <div class="bodyManyPrices">500ml</div>
-                </div>
-              </div>
-              <div class="boxAdittionals">
-                ${additionals.map(add =>
-                  `
-                    <button type="button" id=${add.idAddName} class="adittional ${add.selected ? 'active' : ''}" ${add.available ? '' : 'disabled'} onClick="changeSelect(${add.id})">${add.name}</button>
-                  `
-                ).join('')}
-              </div>
-              <button
-                  class="btnCart btnCart-small addToCart"
-                  data-product-id=${prod.id}
-                  style="margin-top: 1rem"
-                  onclick="addAcaiToCart()">
-                    <i class="fas fa-cart-plus"></i>
-                    Adicionar item
-              </button>
-          </div>
-      </div>
-    </div>
-  </div>`
-).join('')
 
 /*MILKSHAKES*/
  var catMilkShakes = [
