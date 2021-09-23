@@ -884,5 +884,97 @@
         }
       ]
     }
+  ],
+  "adittionals": [
+    {
+      "id": 1,
+      "name": "Banana",
+      "idAddName": "addBanana",
+      "available": true,
+      "price": "R$1,00",
+      "value": 1.00,
+      "selected": true,
+      "fourFree": true
+    },
+    {
+      "id": 2,
+      "name": "Morango",
+      "idAddName": "addMorango",
+      "available": false,
+      "price": "R$1,00",
+      "value": 1.00,
+      "selected": false,
+      "fourFree": true
+    },
+    {
+      "id": 3,
+      "name": "Granola",
+      "idAddName": "addGranola",
+      "available": true,
+      "price": "R$1,00",
+      "value": 1.00,
+      "selected": true,
+      "fourFree": true
+    },
+    {
+      "id": 4,
+      "name": "Paçoca",
+      "idAddName": "addPacoca",
+      "available": true,
+      "price": "R$1,00",
+      "value": 1.00,
+      "selected": false,
+      "fourFree": true
+    },
+    {
+      "id": 5,
+      "name": "LeiteCond.",
+      "idAddName": "addLeiteCond",
+      "available": true,
+      "price": "R$1,00",
+      "value": 1.00,
+      "selected": true,
+      "fourFree": true
+    },
+    {
+      "id": 6,
+      "name": "Leite em pó",
+      "idAddName": "addLeitePo",
+      "available": true,
+      "price": "R$1,00",
+      "value": 1.00,
+      "selected": true,
+      "fourFree": true
+    },
+    {
+      "id": 7,
+      "name": "Amendoim",
+      "idAddName": "addAmendoim",
+      "available": true,
+      "price": "R$1,00",
+      "value": 1.00,
+      "selected": false,
+      "fourFree": true
+    },
+    {
+      "id": 8,
+      "name": "Nutella",
+      "idAddName": "addNutella",
+      "available": true,
+      "price": "R$2,00",
+      "value": 2.00,
+      "selected": false,
+      "fourFree": false
+    },
+    {
+      "id": 9,
+      "name": "Ovomaltine",
+      "idAddName": "addOvomaltine",
+      "available": true,
+      "price": "R$2,00",
+      "value": 2.00,
+      "selected": false,
+      "fourFree": false
+    }
   ]
 }
