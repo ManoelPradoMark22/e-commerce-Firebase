@@ -26,9 +26,13 @@ const starCountRef = ref(db);
 let fbArray = [];
 let catAcais = [];
 
+function closeModal() {
+  modal.style.display = "none";
+}
+
 
 function showArr(arr) {
-  modal.style.display = "none";
+  closeModal();
   fbArray = arr;
   catAcais = arr.sections[2].subsections[0].products;
 }
@@ -36,7 +40,6 @@ function showArr(arr) {
 async function loadFirebase() {
   try {
     await onValue(starCountRef, (snapshot) => {
-      console.log('reset LoadData');
       showArr(snapshot.val());
       const adittionals = snapshot.val().adittionals;
        /*AQUI VOU FAZER OS MAPS DAS SEÇÕES! */
@@ -91,11 +94,12 @@ async function loadFirebase() {
         </div>`
       ).join('')
     }, (error) => {
-      modal.style.display = "none";
+      closeModal();
       alert('Erro ao carregar! Verifique sua conexão e carregue novamente a página!');
       console.log('Erro ao carregar dados!');
     })
   } catch {
+    closeModal();
     alert('Erro ao carregar! Verifique sua conexão e carregue novamente a página!');
   }
 }
