@@ -90,9 +90,7 @@ async function loadFirebase() {
           </div>
         </div>`
       ).join('')
-    }).catch(error => {
-      modal.style.display = "none";
-    })
+    }).catch(error)
   } catch {
     modal.style.display = "none";
   }
