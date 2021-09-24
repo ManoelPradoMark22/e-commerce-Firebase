@@ -55,19 +55,19 @@ async function loadFirebase() {
                     <text id="idChangePriceAcai" class="priceCatalog">${convertToReal(prod.priceTotalAcai)}</text>
                     <p>${prod.description}</p>
                     <div class="boxManyPrices boxAcaiSizes">
-                      <div id="sizeAcaiPP" class="manyPrices acaiSizeInside active" onclick="changeSelectedSizeAcai(1)">
+                      <div id="sizeAcaiPP" class="manyPrices acaiSizeInside active" onclick="changeSelectedSizeAcai(1, 'sizeAcaiPP')">
                         <h3 class="headerManyPrices">PP</h3>
                         <div class="bodyManyPrices">250ml</div>
                       </div>
-                      <div id="sizeAcaiP" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(2)">
+                      <div id="sizeAcaiP" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(2, 'sizeAcaiP')">
                         <h3 class="headerManyPrices">P</h3>
                         <div class="bodyManyPrices">300ml</div>
                       </div>
-                      <div id="sizeAcaiM" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(3)">
+                      <div id="sizeAcaiM" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(3, 'sizeAcaiM')">
                         <h3 class="headerManyPrices">M</h3>
                         <div class="bodyManyPrices">400ml</div>
                       </div>
-                      <div id="sizeAcaiG" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(4)">
+                      <div id="sizeAcaiG" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(4, 'sizeAcaiG')">
                         <h3 class="headerManyPrices">G</h3>
                         <div class="bodyManyPrices">500ml</div>
                       </div>
@@ -421,9 +421,9 @@ $(document).ready(function(){
     $(this).addClass('active').siblings().removeClass('active');
   });
 
-  $('.boxAcaiSizes .acaiSizeInside').click(function(){
+  /*$('.boxAcaiSizes .acaiSizeInside').click(function(){
     $(this).addClass('active').siblings().removeClass('active');
-  });
+  }); */
 
   $('.boxMSSizes .msSizeInside').click(function(){
     $(this).addClass('active').siblings().removeClass('active');
@@ -1265,7 +1265,7 @@ window.changeSelect = function changeSelect(id) {
   }
 }
 
-window.changeSelectedSizeAcai = function changeSelectedSizeAcai(sizeId) {
+window.changeSelectedSizeAcai = function changeSelectedSizeAcai(sizeId, divIdAcai) {
   var priceSize = 5.00;
   var newName = 'Açaí';
   var imgPath = sorveteriaImages.imgAcaiPP;
@@ -1309,6 +1309,14 @@ window.changeSelectedSizeAcai = function changeSelectedSizeAcai(sizeId) {
   document.getElementById("idChangePriceAcai").innerHTML = convertToReal(newTotal);
   document.getElementById("nameH3Acai").innerHTML = `<span>0${sizeId}.</span> ${newName}`;
   document.getElementById("imgAcai").src=imgPath;
+
+  var el = document.querySelectorAll('.boxAcaiSizes .acaiSizeInside');
+    for (let i = 0; i < el.length; i++) { 
+      el[i].className = 'manyPrices acaiSizeInside';
+    }
+
+  document.getElementById(divIdAcai).className = "manyPrices acaiSizeInside active";
+
 }
 
 
