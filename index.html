@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorveteria Chaplin</title>
 
+    <script>
+        function DezSegundos(){
+            document.getElementById("textLoading").innerHTML = `Aguarde, carregando...<br>Verifique sua conexão...`;
+        }
+        setTimeout(DezSegundos, 1000*15);
+    </script>
+
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
 
@@ -34,7 +41,7 @@
             colors="primary:#F7CA3E,secondary:#f44336"
             style="width:10rem;height:10rem">
         </lord-icon>
-        <p>Aguarde, carregando..</p>
+        <p id="textLoading">Aguarde, carregando...</p>
     </div>
   
 </div>
