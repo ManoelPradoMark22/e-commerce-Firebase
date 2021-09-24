@@ -2,6 +2,9 @@ import lanchesArray from './lanches.js'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
 import { getDatabase, ref, onValue} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
 
+// Get the modal
+var modal = document.getElementById("myModal");
+
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBjp1xZR6T0fBs4uYST8PNV7rC2rUxNjpg",
   authDomain: "e-commerce-3c41b.firebaseapp.com",
@@ -25,67 +28,74 @@ let catAcais = [];
 
 
 function showArr(arr) {
- fbArray = arr;
- catAcais = arr.sections[2].subsections[0].products;
+  modal.style.display = "none";
+  fbArray = arr;
+  catAcais = arr.sections[2].subsections[0].products;
 }
 
 async function loadFirebase() {
-  await onValue(starCountRef, (snapshot) => {
-    console.log('reset LoadFirebase');
-    showArr(snapshot.val());
-    const adittionals = snapshot.val().adittionals;
-     /*AQUI VOU FAZER OS MAPS DAS SEÇÕES! */
-    document.getElementById('catAcais').innerHTML = snapshot.val().sections[2].subsections[0].products.map(prod => 
-      `<div>
-        <div id="${prod.id}" class="row tabAcais" data-aos="fade-right" style="${prod.display}">
-          <div class="image" data-aos="fade-left">
-              <img id="imgAcai" src="${prod.img}" alt="${prod.name}">
+  try {
+    await onValue(starCountRef, (snapshot) => {
+      console.log('reset LoadData');
+      showArr(snapshot.val());
+      const adittionals = snapshot.val().adittionals;
+       /*AQUI VOU FAZER OS MAPS DAS SEÇÕES! */
+      document.getElementById('catAcais').innerHTML = snapshot.val().sections[2].subsections[0].products.map(prod => 
+        `<div>
+          <div id="${prod.id}" class="row tabAcais" data-aos="fade-right" style="${prod.display}">
+            <div class="image" data-aos="fade-left">
+                <img id="imgAcai" src="${prod.img}" alt="${prod.name}">
+            </div>
+      
+            <div class="content">
+                <div class="info">
+                    <h3 id="nameH3Acai"> <span>0${prod.number}.</span> ${prod.name}</h3>
+                    <text id="idChangePriceAcai" class="priceCatalog">${convertToReal(prod.priceTotalAcai)}</text>
+                    <p>${prod.description}</p>
+                    <div class="boxManyPrices boxAcaiSizes">
+                      <div id="sizeAcaiPP" class="manyPrices acaiSizeInside active" onclick="changeSelectedSizeAcai(1)">
+                        <h3 class="headerManyPrices">PP</h3>
+                        <div class="bodyManyPrices">250ml</div>
+                      </div>
+                      <div id="sizeAcaiP" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(2)">
+                        <h3 class="headerManyPrices">P</h3>
+                        <div class="bodyManyPrices">300ml</div>
+                      </div>
+                      <div id="sizeAcaiM" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(3)">
+                        <h3 class="headerManyPrices">M</h3>
+                        <div class="bodyManyPrices">400ml</div>
+                      </div>
+                      <div id="sizeAcaiG" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(4)">
+                        <h3 class="headerManyPrices">G</h3>
+                        <div class="bodyManyPrices">500ml</div>
+                      </div>
+                    </div>
+                    <div class="boxAdittionals">
+                      ${adittionals.map(add =>
+                        `
+                          <button type="button" id=${add.idAddName} class="adittional ${add.selected ? 'active' : ''}" ${add.available ? '' : 'disabled'} onClick="changeSelect(${add.id})">${add.name}</button>
+                        `
+                      ).join('')}
+                    </div>
+                    <button
+                        class="btnCart btnCart-small addToCart"
+                        data-product-id=${prod.id}
+                        style="margin-top: 1rem"
+                        onclick="addAcaiToCart()">
+                          <i class="fas fa-cart-plus"></i>
+                          Adicionar item
+                    </button>
+                </div>
+            </div>
           </div>
-    
-          <div class="content">
-              <div class="info">
-                  <h3 id="nameH3Acai"> <span>0${prod.number}.</span> ${prod.name}</h3>
-                  <text id="idChangePriceAcai" class="priceCatalog">${convertToReal(prod.priceTotalAcai)}</text>
-                  <p>${prod.description}</p>
-                  <div class="boxManyPrices boxAcaiSizes">
-                    <div id="sizeAcaiPP" class="manyPrices acaiSizeInside active" onclick="changeSelectedSizeAcai(1)">
-                      <h3 class="headerManyPrices">PP</h3>
-                      <div class="bodyManyPrices">250ml</div>
-                    </div>
-                    <div id="sizeAcaiP" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(2)">
-                      <h3 class="headerManyPrices">P</h3>
-                      <div class="bodyManyPrices">300ml</div>
-                    </div>
-                    <div id="sizeAcaiM" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(3)">
-                      <h3 class="headerManyPrices">M</h3>
-                      <div class="bodyManyPrices">400ml</div>
-                    </div>
-                    <div id="sizeAcaiG" class="manyPrices acaiSizeInside" onclick="changeSelectedSizeAcai(4)">
-                      <h3 class="headerManyPrices">G</h3>
-                      <div class="bodyManyPrices">500ml</div>
-                    </div>
-                  </div>
-                  <div class="boxAdittionals">
-                    ${adittionals.map(add =>
-                      `
-                        <button type="button" id=${add.idAddName} class="adittional ${add.selected ? 'active' : ''}" ${add.available ? '' : 'disabled'} onClick="changeSelect(${add.id})">${add.name}</button>
-                      `
-                    ).join('')}
-                  </div>
-                  <button
-                      class="btnCart btnCart-small addToCart"
-                      data-product-id=${prod.id}
-                      style="margin-top: 1rem"
-                      onclick="addAcaiToCart()">
-                        <i class="fas fa-cart-plus"></i>
-                        Adicionar item
-                  </button>
-              </div>
-          </div>
-        </div>
-      </div>`
-    ).join('')
-  });
+        </div>`
+      ).join('')
+    }).catch(error => {
+      modal.style.display = "none";
+    })
+  } catch {
+    modal.style.display = "none";
+  }
 }
 
 await loadFirebase();
@@ -98,8 +108,6 @@ if(!productsInCart){
 }
 
 const arrLanches = lanchesArray();
-
-console.log(fbArray);
 
 const parentElement = document.querySelector('#buyItems');
 
@@ -2041,7 +2049,6 @@ window.changeRightPizzaSelection = function (flavor, type){
   document.getElementById("choosePizzaFlavorRight").innerHTML = `<p title="${flavor}">${flavor}</p>`;
   flavorRightPizzaSelected = flavor;
   typeRightPizzaSelected = type;
-  console.log(sizePizzaSelected);
   if (sizePizzaSelected==='Brotinho' || sizePizzaSelected==='Brot. Especial') {
     flavorLeftPizzaSelected = flavorRightPizzaSelected;
     typeLeftPizzaSelected = typeRightPizzaSelected;
