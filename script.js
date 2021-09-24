@@ -90,7 +90,11 @@ async function loadFirebase() {
           </div>
         </div>`
       ).join('')
-    }).catch(error)
+    }, (error) => {
+      modal.style.display = "none";
+      alert('Erro ao carregar! Verifique sua conexão e carregue novamente a página!');
+      console.log('Erro ao carregar dados!');
+    })
   } catch {
     modal.style.display = "none";
   }
