@@ -1,4 +1,3 @@
-import lanchesArray from './lanches.js'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
 import { getDatabase, ref, onValue} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
 
@@ -112,8 +111,6 @@ let productsInCart = JSON.parse(sessionStorage.getItem('shoppingCart'));
 if(!productsInCart){
 	productsInCart = [];
 }
-
-const arrLanches = lanchesArray();
 
 const parentElement = document.querySelector('#buyItems');
 
@@ -305,7 +302,7 @@ window.addItemToCart = function addItemToCart(prodObj) {
 window.addAcaiToCart = function addAcaiToCart() {
   let adittionalsString = '';
 
-  additionals.map(add => {
+  fbArray.adittionals.map(add => {
     if (add.selected) {
       adittionalsString = `${adittionalsString}${add.name}-`;
     }
