@@ -25,13 +25,14 @@ let fbArray = [];
 
 function showArr(arr) {
  fbArray = arr;
- /*AQUI VOU FAZER OS MAPS DAS SEÇÕES! */
 }
 
 async function loadFirebase() {
   await onValue(starCountRef, (snapshot) => {
+    console.log('reset LoadFirebase');
     showArr(snapshot.val());
     const adittionals = snapshot.val().adittionals;
+     /*AQUI VOU FAZER OS MAPS DAS SEÇÕES! */
     document.getElementById('catAcais').innerHTML = catAcais.map(prod => 
       `<div>
         <div id="${prod.id}" class="row tabAcais" data-aos="fade-right" style="${prod.display}">
@@ -1204,7 +1205,6 @@ var catAcais = [
 ]
 
 window.changeSelect = function changeSelect(id) {
-  console.log('aqui change select');
   var contador = 0;
   var valor = 0;
   var simpleAdd = true;
