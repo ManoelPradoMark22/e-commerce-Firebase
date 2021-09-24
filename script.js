@@ -21,10 +21,12 @@ const starCountRef = ref(db);
 }); */
 
 let fbArray = [];
+let catAcais = [];
 
 
 function showArr(arr) {
  fbArray = arr;
+ catAcais = arr.sections[2].subsections[0].products;
 }
 
 async function loadFirebase() {
@@ -33,7 +35,7 @@ async function loadFirebase() {
     showArr(snapshot.val());
     const adittionals = snapshot.val().adittionals;
      /*AQUI VOU FAZER OS MAPS DAS SEÇÕES! */
-    document.getElementById('catAcais').innerHTML = catAcais.map(prod => 
+    document.getElementById('catAcais').innerHTML = snapshot.val().sections[2].subsections[0].products.map(prod => 
       `<div>
         <div id="${prod.id}" class="row tabAcais" data-aos="fade-right" style="${prod.display}">
           <div class="image" data-aos="fade-left">
@@ -1190,19 +1192,6 @@ document.getElementById('catPizzas').innerHTML = catPizzas.map(prod =>
 
 /* Sessão 3 - SORVETERIA
  Açaís (3tab1)*/
-
-var catAcais = [
-  {
-    id: '3tab1.1',
-    number: 1,
-    name:"Açaí (250ml)",
-    description: "Aquele açaí delicioso e super cremoso! &#128523",
-    priceOriginalAcai: 5.00,
-    priceTotalAcai: 5.00,
-    img: sorveteriaImages.imgAcaiPP,
-    display: "display:flex"
-  }
-]
 
 window.changeSelect = function changeSelect(id) {
   var contador = 0;
