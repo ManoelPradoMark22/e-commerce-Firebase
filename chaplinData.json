@@ -459,7 +459,7 @@
               "description": "Aquele açaí delicioso e super cremoso! &#128523",
               "priceOriginalAcai": 5.00,
               "priceTotalAcai": 5.00,
-              "img": "sorveteriaImages.imgAcaiPP",
+              "img": "https://i.ibb.co/ZWHjbvv/pp.jpg",
               "display": "display:flex"
             },
             {
@@ -469,7 +469,7 @@
               "description": "Aquele açaí delicioso e super cremoso! &#128523",
               "priceOriginalAcai": 7.00,
               "priceTotalAcai": 7.00,
-              "img": "sorveteriaImages.imgAcaiPP",
+              "img": "https://i.ibb.co/kXLSpQj/p.png",
               "display": "display:none"
             },
             {
@@ -479,7 +479,7 @@
               "description": "Aquele açaí delicioso e super cremoso! &#128523",
               "priceOriginalAcai": 10.00,
               "priceTotalAcai": 10.00,
-              "img": "sorveteriaImages.imgAcaiPP",
+              "img": "https://i.ibb.co/rx7STdG/m.png",
               "display": "display:none"
             },
             {
@@ -489,7 +489,7 @@
               "description": "Aquele açaí delicioso e super cremoso! &#128523",
               "priceOriginalAcai": 12.00,
               "priceTotalAcai": 12.00,
-              "img": "sorveteriaImages.imgAcaiPP",
+              "img": "https://i.ibb.co/zFDsx6D/g.png",
               "display": "display:none"
             }
           ]
