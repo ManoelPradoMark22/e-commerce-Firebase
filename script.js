@@ -33,7 +33,7 @@ function closeModal() {
 function showArr(arr) {
   closeModal();
   fbArray = arr;
-  catAcais = arr.sections[2].subsections[0].products;
+  catAcais = arr.sorveteria.subsections[0].products;
 }
 
 async function loadFirebase() {
@@ -42,7 +42,7 @@ async function loadFirebase() {
       showArr(snapshot.val());
       const adittionals = snapshot.val().adittionals;
        /*AQUI VOU FAZER OS MAPS DAS SEÇÕES! */
-      document.getElementById('catAcais').innerHTML = snapshot.val().sections[2].subsections[0].products.map(prod => 
+      document.getElementById('catAcais').innerHTML = snapshot.val().sorveteria.subsections[0].products.map(prod => 
         `<div>
           <div id="${prod.id}" class="row tabAcais" data-aos="fade-right" style="${prod.display}">
             <div class="image" data-aos="fade-left">
@@ -92,6 +92,8 @@ async function loadFirebase() {
           </div>
         </div>`
       ).join('')
+
+
     }, (error) => {
       closeModal();
       alert('Erro ao carregar! Verifique sua conexão e carregue novamente a página!');

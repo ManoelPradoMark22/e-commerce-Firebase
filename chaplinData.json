@@ -1,380 +1,379 @@
 {
-  "sections": [
-    {
-      "name": "Lanchonete",
-      "subsections": [
-        {
-          "name": "Lanches",
-          "products": [
-            {
-              "id": "1tab1.1",
-              "number": 1,
-              "name":"X-Tudo",
-              "description": "Hambúrguer, bacon, salsicha, ovo, queijo, presunto, catupiry, alface, tomate, milho e molho.",
-              "price":"R$ 13,00",
-              "priceNumb": 13.00,
-              "img": "lanchesImages.imgXtudo",
-              "display": "display:flex"
-            },
-            {
-              "id": "1tab1.2",
-              "number": 2,
-              "name":"X-Calabresa",
-              "description": "Hambúrguer, calabresa, queijo, cebola, alface, tomate e molho.",
-              "price":"R$ 10,00",
-              "priceNumb": 10.00,
-              "img": "lanchesImages.imgXcalabresa",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab1.3",
-              "number": 3,
-              "name":"X-Egg",
-              "description": "Hambúrguer, ovo, queijo, alface, tomate e molho.",
-              "price":"R$ 9,00",
-              "priceNumb": 9.00,
-              "img": "lanchesImages.imgXegg",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab1.4",
-              "number": 4,
-              "name":"Americano",
-              "description": "Queijo, presunto, ovo, alface e tomate.",
-              "price":"R$ 7,50",
-              "priceNumb": 7.50,
-              "img": "lanchesImages.imgAmericano",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab1.5",
-              "number": 5,
-              "name":"X-Salada",
-              "description": "Hambúrguer, alface, tomate e milho.",
-              "price":"R$ 7,00",
-              "priceNumb": 7.00,
-              "img": "lanchesImages.imgXsalada",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab1.6",
-              "number": 6,
-              "name":"X-Frango",
-              "description": "Peito de frango, queijo, alface, tomate e molho.",
-              "price":"R$ 7,00",
-              "priceNumb": 7.00,
-              "img": "lanchesImages.imgXfrango",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab1.7",
-              "number": 7,
-              "name":"X-Burguer",
-              "description": "Hambúrguer, bacon, salsicha, ovo, queijo, presunto, catupiry, alface, tomate, milho e molho.",
-              "price":"R$ 6,00",
-              "priceNumb": 6.00,
-              "img": "lanchesImages.imgXburguer",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab1.8",
-              "number": 8,
-              "name":"Mistão",
-              "description": "Hambúrguer, queijo, presunto e molho.",
-              "price":"R$ 5,00",
-              "priceNumb": 5.00,
-              "img": "lanchesImages.imgMistao",
-              "display": "display:none"
-            }
-          ] 
-        },
-        {
-          "name": "Porções",
-          "products": [
-            {
-              "id": "1tab2.1",
-              "number": 1,
-              "name":"Frango e Batata com Cheddar e Bacon",
-              "available": true,
-              "description": "sdk dask dajks k",
-              "price":"R$ 28,00",
-              "priceNumb": 28.00,
-              "img": "porcoesImages.imgCompletao",
-              "display": "display:flex"
-            },
-            {
-              "id": "1tab2.2",
-              "number": 2,
-              "name":"Frango",
-              "available": true,
-              "description": "sdk dask dajks k",
-              "price":"R$ 16,00",
-              "priceNumb": 16.00,
-              "img": "porcoesImages.imgFrango",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab2.3",
-              "number": 3,
-              "name":"Batata com Cheddar e Bacon",
-              "available": true,
-              "description": "sdk dask dajks k",
-              "price":"R$ 12,00",
-              "priceNumb": 12.00,
-              "img": "porcoesImages.imgBatataChedBac",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab2.4",
-              "number": 4,
-              "name":"Batata com Cheddar",
-              "available": true,
-              "description": "sdk dask dajks k",
-              "price":"R$ 10,00",
-              "priceNumb": 10.00,
-              "img": "porcoesImages.imgBatataCheddar",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab2.5",
-              "number": 5,
-              "name":"Batata com Bacon",
-              "available": true,
-              "description": "sdk dask dajks k",
-              "price":"R$ 10,00",
-              "priceNumb": 10.00,
-              "img": "porcoesImages.imgBatataBacon",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab2.6",
-              "number": 6,
-              "name":"Batata Frita",
-              "available": true,
-              "description": "sdk dask dajks k",
-              "price":"R$ 8,00",
-              "priceNumb": 8.00,
-              "img": "porcoesImages.imgBatata",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab2.7",
-              "number": 7,
-              "name":"Frango a passarinho",
-              "available": false,
-              "description": "sdk dask dajks k",
-              "price":"R$ 22,00",
-              "priceNumb": 22.00,
-              "img": "porcoesImages.imgFrangoPass",
-              "display": "display:none"
-            }
-          ]
-        },
-        {
-          "name": "Assados",
-          "products": [
-            {
-              "id": "1tab3.1",
-              "number": "01",
-              "name":"Esfirra de frango",
-              "available": true,
-              "description": "Com frango desfiado delicioso!",
-              "price":"R$3,50",
-              "priceNumb": 3.50,
-              "img": "salgadosAssadosImages.imgEsfirraFrango",
-              "display": "display:flex"
-            },
-            {
-              "id": "1tab3.2",
-              "number": "02",
-              "name":"Esfirra de carne",
-              "available": true,
-              "description": "Recheada com carne de dar água na boca!",
-              "price":"R$3,50",
-              "priceNumb": 3.50,
-              "img": "salgadosAssadosImages.imgEsfCarne",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab3.3",
-              "number": "03",
-              "name":"Esfirra de queijo e presunto",
-              "available": true,
-              "description": "Irresistível!",
-              "price":"R$3,50",
-              "priceNumb": 3.50,
-              "img": "salgadosAssadosImages.imgEsfirraQueijo",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab3.4",
-              "number": "04",
-              "name":"Esfirra de frango com catupiry",
-              "available": true,
-              "description": "A queridinha da clientela!&#128525;",
-              "price":"R$4,00",
-              "priceNumb": 4.00,
-              "img": "salgadosAssadosImages.imgEsfirraFrangoCatupiry",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab3.5",
-              "number": "05",
-              "name":"Esfirra de frango com cheddar",
-              "available": true,
-              "description": "Quem não gosta de cheddar né?&#129316;",
-              "price":"R$4,00",
-              "priceNumb": 4.00,
-              "img": "salgadosAssadosImages.imgEsfirraFrangoCheddar",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab3.6",
-              "number": "06",
-              "name":"Esfirra de calabresa com queijo",
-              "available": true,
-              "description": "Quero bis!&#128540;",
-              "price":"R$4,00",
-              "priceNumb": 4.00,
-              "img": "salgadosAssadosImages.imgEsfirraCalabresa",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab3.7",
-              "number": "07",
-              "name":"Esfirra de calabresa com queijo e cheddar",
-              "available": true,
-              "description": "Alguém disse cheddar?&#128556;",
-              "price":"R$5,00",
-              "priceNumb": 5.00,
-              "img": "salgadosAssadosImages.imgEsfCalabCheddar",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab3.8",
-              "number": "08",
-              "name":"Hamburgão",
-              "available": true,
-              "description": "Hambúrguer, queijo e tomate. Esse acompanhado de um milk-shake... hummmmm&#128523;",
-              "price":"R$4,00",
-              "priceNumb": 4.00,
-              "img": "salgadosAssadosImages.imgHamburgao",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab3.9",
-              "number": "09",
-              "name":"Bauru",
-              "available": true,
-              "description": "Queijo, presunto, milho, tomate e orégano. Perfeito! Muitos preferem chamá-lo de pão pizza.",
-              "price":"R$4,00",
-              "priceNumb": 4.00,
-              "img": "salgadosAssadosImages.imgBauru",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab3.10",
-              "number": "10",
-              "name":"Enroladinho de salsicha assado",
-              "available": true,
-              "description": "Aquele tradicional salgado de salsicha!&#127789;",
-              "price":"R$3,00",
-              "priceNumb": 3.00,
-              "img": "salgadosAssadosImages.imgEnrSals",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab3.11",
-              "number": "11",
-              "name":"Enroladinho de salsicha gourmet",
-              "available": true,
-              "description": "Salsicha com queijo, combinação perfeita!&#127789;",
-              "price":"R$3,50",
-              "priceNumb": 3.50,
-              "img": "salgadosAssadosImages.imgEnrSalsGourmet",
-              "display": "display:none"
-            }
-          ]
-        },
-        {
-          "name": "Fritos",
-          "products": [
-            {
-              "id": "1tab4.1",
-              "number": "01",
-              "name":"Coxinha",
-              "description": "A coxinha top 1 do Mundo!&#127942;&#127758;",
-              "price":"R$ 3,00",
-              "priceNumb": 3.00,
-              "img": "salgadosFritosImages.imgCoxinha",
-              "display": "display:flex"
-            },
-            {
-              "id": "1tab4.2",
-              "number": "02",
-              "name":"Risoles de Carne",
-              "description": "Aquele bolinho de carne maravilhoso!&#129316;",
-              "price":"R$ 3,50",
-              "priceNumb": 3.50,
-              "img": "salgadosFritosImages.imgRisolesCarne",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab4.3",
-              "number": "03",
-              "name":"Risoles de Pizza",
-              "description": "Travesseiro ou Risoles, o nome não importa. Mas é unânime que este é suuuper irresistível!&#128523;",
-              "price":"R$ 3,50",
-              "priceNumb": 3.50,
-              "img": "salgadosFritosImages.imgRisolesPizza",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab4.4",
-              "number": "04",
-              "name":"Enroladinho de salsicha frito",
-              "description": "Que tal optar pela deliciosa e tradicional salsicha?&#127789;",
-              "price":"R$ 3,50",
-              "priceNumb": 3.50,
-              "img": "salgadosFritosImages.imgEnrSalsichaFrito",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab4.5",
-              "number": "05",
-              "name":"Enroladinho de queijo e presunto frito",
-              "description": "Mais um queridinho da galera!&#128525;",
-              "price":"R$ 3,50",
-              "priceNumb": 3.50,
-              "img": "salgadosFritosImages.imgEnrQueijoPres",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab4.6",
-              "number": "06",
-              "name":"Kibe",
-              "description": "Aquele kibe maravilhosoooo!&#128523;",
-              "price":"R$ 3,50",
-              "priceNumb": 3.50,
-              "img": "salgadosFritosImages.imgKibe",
-              "display": "display:none"
-            },
-            {
-              "id": "1tab4.7",
-              "number": "07",
-              "name":"Steak de Frango",
-              "description": "O tradicional empanado de frango!&#128539;",
-              "price":"R$ 2,50",
-              "priceNumb": 2.50,
-              "img": "salgadosFritosImages.imgSteak",
-              "display": "display:none"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Pizzaria",
+  "lanchonete" : {
+    "name": "Lanchonete",
+    "subsections": [
+      {
+        "name": "Lanches",
+        "products": [
+          {
+            "id": "1tab1.1",
+            "number": 1,
+            "name":"X-Tudo",
+            "description": "Hambúrguer, bacon, salsicha, ovo, queijo, presunto, catupiry, alface, tomate, milho e molho.",
+            "price":"R$ 13,00",
+            "priceNumb": 13.00,
+            "img": "lanchesImages.imgXtudo",
+            "display": "display:flex"
+          },
+          {
+            "id": "1tab1.2",
+            "number": 2,
+            "name":"X-Calabresa",
+            "description": "Hambúrguer, calabresa, queijo, cebola, alface, tomate e molho.",
+            "price":"R$ 10,00",
+            "priceNumb": 10.00,
+            "img": "lanchesImages.imgXcalabresa",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab1.3",
+            "number": 3,
+            "name":"X-Egg",
+            "description": "Hambúrguer, ovo, queijo, alface, tomate e molho.",
+            "price":"R$ 9,00",
+            "priceNumb": 9.00,
+            "img": "lanchesImages.imgXegg",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab1.4",
+            "number": 4,
+            "name":"Americano",
+            "description": "Queijo, presunto, ovo, alface e tomate.",
+            "price":"R$ 7,50",
+            "priceNumb": 7.50,
+            "img": "lanchesImages.imgAmericano",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab1.5",
+            "number": 5,
+            "name":"X-Salada",
+            "description": "Hambúrguer, alface, tomate e milho.",
+            "price":"R$ 7,00",
+            "priceNumb": 7.00,
+            "img": "lanchesImages.imgXsalada",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab1.6",
+            "number": 6,
+            "name":"X-Frango",
+            "description": "Peito de frango, queijo, alface, tomate e molho.",
+            "price":"R$ 7,00",
+            "priceNumb": 7.00,
+            "img": "lanchesImages.imgXfrango",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab1.7",
+            "number": 7,
+            "name":"X-Burguer",
+            "description": "Hambúrguer, bacon, salsicha, ovo, queijo, presunto, catupiry, alface, tomate, milho e molho.",
+            "price":"R$ 6,00",
+            "priceNumb": 6.00,
+            "img": "lanchesImages.imgXburguer",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab1.8",
+            "number": 8,
+            "name":"Mistão",
+            "description": "Hambúrguer, queijo, presunto e molho.",
+            "price":"R$ 5,00",
+            "priceNumb": 5.00,
+            "img": "lanchesImages.imgMistao",
+            "display": "display:none"
+          }
+        ] 
+      },
+      {
+        "name": "Porções",
+        "products": [
+          {
+            "id": "1tab2.1",
+            "number": 1,
+            "name":"Frango e Batata com Cheddar e Bacon",
+            "available": true,
+            "description": "sdk dask dajks k",
+            "price":"R$ 28,00",
+            "priceNumb": 28.00,
+            "img": "porcoesImages.imgCompletao",
+            "display": "display:flex"
+          },
+          {
+            "id": "1tab2.2",
+            "number": 2,
+            "name":"Frango",
+            "available": true,
+            "description": "sdk dask dajks k",
+            "price":"R$ 16,00",
+            "priceNumb": 16.00,
+            "img": "porcoesImages.imgFrango",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab2.3",
+            "number": 3,
+            "name":"Batata com Cheddar e Bacon",
+            "available": true,
+            "description": "sdk dask dajks k",
+            "price":"R$ 12,00",
+            "priceNumb": 12.00,
+            "img": "porcoesImages.imgBatataChedBac",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab2.4",
+            "number": 4,
+            "name":"Batata com Cheddar",
+            "available": true,
+            "description": "sdk dask dajks k",
+            "price":"R$ 10,00",
+            "priceNumb": 10.00,
+            "img": "porcoesImages.imgBatataCheddar",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab2.5",
+            "number": 5,
+            "name":"Batata com Bacon",
+            "available": true,
+            "description": "sdk dask dajks k",
+            "price":"R$ 10,00",
+            "priceNumb": 10.00,
+            "img": "porcoesImages.imgBatataBacon",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab2.6",
+            "number": 6,
+            "name":"Batata Frita",
+            "available": true,
+            "description": "sdk dask dajks k",
+            "price":"R$ 8,00",
+            "priceNumb": 8.00,
+            "img": "porcoesImages.imgBatata",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab2.7",
+            "number": 7,
+            "name":"Frango a passarinho",
+            "available": false,
+            "description": "sdk dask dajks k",
+            "price":"R$ 22,00",
+            "priceNumb": 22.00,
+            "img": "porcoesImages.imgFrangoPass",
+            "display": "display:none"
+          }
+        ]
+      },
+      {
+        "name": "Assados",
+        "products": [
+          {
+            "id": "1tab3.1",
+            "number": "01",
+            "name":"Esfirra de frango",
+            "available": true,
+            "description": "Com frango desfiado delicioso!",
+            "price":"R$3,50",
+            "priceNumb": 3.50,
+            "img": "salgadosAssadosImages.imgEsfirraFrango",
+            "display": "display:flex"
+          },
+          {
+            "id": "1tab3.2",
+            "number": "02",
+            "name":"Esfirra de carne",
+            "available": true,
+            "description": "Recheada com carne de dar água na boca!",
+            "price":"R$3,50",
+            "priceNumb": 3.50,
+            "img": "salgadosAssadosImages.imgEsfCarne",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab3.3",
+            "number": "03",
+            "name":"Esfirra de queijo e presunto",
+            "available": true,
+            "description": "Irresistível!",
+            "price":"R$3,50",
+            "priceNumb": 3.50,
+            "img": "salgadosAssadosImages.imgEsfirraQueijo",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab3.4",
+            "number": "04",
+            "name":"Esfirra de frango com catupiry",
+            "available": true,
+            "description": "A queridinha da clientela!&#128525;",
+            "price":"R$4,00",
+            "priceNumb": 4.00,
+            "img": "salgadosAssadosImages.imgEsfirraFrangoCatupiry",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab3.5",
+            "number": "05",
+            "name":"Esfirra de frango com cheddar",
+            "available": true,
+            "description": "Quem não gosta de cheddar né?&#129316;",
+            "price":"R$4,00",
+            "priceNumb": 4.00,
+            "img": "salgadosAssadosImages.imgEsfirraFrangoCheddar",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab3.6",
+            "number": "06",
+            "name":"Esfirra de calabresa com queijo",
+            "available": true,
+            "description": "Quero bis!&#128540;",
+            "price":"R$4,00",
+            "priceNumb": 4.00,
+            "img": "salgadosAssadosImages.imgEsfirraCalabresa",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab3.7",
+            "number": "07",
+            "name":"Esfirra de calabresa com queijo e cheddar",
+            "available": true,
+            "description": "Alguém disse cheddar?&#128556;",
+            "price":"R$5,00",
+            "priceNumb": 5.00,
+            "img": "salgadosAssadosImages.imgEsfCalabCheddar",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab3.8",
+            "number": "08",
+            "name":"Hamburgão",
+            "available": true,
+            "description": "Hambúrguer, queijo e tomate. Esse acompanhado de um milk-shake... hummmmm&#128523;",
+            "price":"R$4,00",
+            "priceNumb": 4.00,
+            "img": "salgadosAssadosImages.imgHamburgao",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab3.9",
+            "number": "09",
+            "name":"Bauru",
+            "available": true,
+            "description": "Queijo, presunto, milho, tomate e orégano. Perfeito! Muitos preferem chamá-lo de pão pizza.",
+            "price":"R$4,00",
+            "priceNumb": 4.00,
+            "img": "salgadosAssadosImages.imgBauru",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab3.10",
+            "number": "10",
+            "name":"Enroladinho de salsicha assado",
+            "available": true,
+            "description": "Aquele tradicional salgado de salsicha!&#127789;",
+            "price":"R$3,00",
+            "priceNumb": 3.00,
+            "img": "salgadosAssadosImages.imgEnrSals",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab3.11",
+            "number": "11",
+            "name":"Enroladinho de salsicha gourmet",
+            "available": true,
+            "description": "Salsicha com queijo, combinação perfeita!&#127789;",
+            "price":"R$3,50",
+            "priceNumb": 3.50,
+            "img": "salgadosAssadosImages.imgEnrSalsGourmet",
+            "display": "display:none"
+          }
+        ]
+      },
+      {
+        "name": "Fritos",
+        "products": [
+          {
+            "id": "1tab4.1",
+            "number": "01",
+            "name":"Coxinha",
+            "description": "A coxinha top 1 do Mundo!&#127942;&#127758;",
+            "price":"R$ 3,00",
+            "priceNumb": 3.00,
+            "img": "salgadosFritosImages.imgCoxinha",
+            "display": "display:flex"
+          },
+          {
+            "id": "1tab4.2",
+            "number": "02",
+            "name":"Risoles de Carne",
+            "description": "Aquele bolinho de carne maravilhoso!&#129316;",
+            "price":"R$ 3,50",
+            "priceNumb": 3.50,
+            "img": "salgadosFritosImages.imgRisolesCarne",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab4.3",
+            "number": "03",
+            "name":"Risoles de Pizza",
+            "description": "Travesseiro ou Risoles, o nome não importa. Mas é unânime que este é suuuper irresistível!&#128523;",
+            "price":"R$ 3,50",
+            "priceNumb": 3.50,
+            "img": "salgadosFritosImages.imgRisolesPizza",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab4.4",
+            "number": "04",
+            "name":"Enroladinho de salsicha frito",
+            "description": "Que tal optar pela deliciosa e tradicional salsicha?&#127789;",
+            "price":"R$ 3,50",
+            "priceNumb": 3.50,
+            "img": "salgadosFritosImages.imgEnrSalsichaFrito",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab4.5",
+            "number": "05",
+            "name":"Enroladinho de queijo e presunto frito",
+            "description": "Mais um queridinho da galera!&#128525;",
+            "price":"R$ 3,50",
+            "priceNumb": 3.50,
+            "img": "salgadosFritosImages.imgEnrQueijoPres",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab4.6",
+            "number": "06",
+            "name":"Kibe",
+            "description": "Aquele kibe maravilhosoooo!&#128523;",
+            "price":"R$ 3,50",
+            "priceNumb": 3.50,
+            "img": "salgadosFritosImages.imgKibe",
+            "display": "display:none"
+          },
+          {
+            "id": "1tab4.7",
+            "number": "07",
+            "name":"Steak de Frango",
+            "description": "O tradicional empanado de frango!&#128539;",
+            "price":"R$ 2,50",
+            "priceNumb": 2.50,
+            "img": "salgadosFritosImages.imgSteak",
+            "display": "display:none"
+          }
+        ]
+      }
+    ]
+  },
+  "pizzaria": {
+    "name": "Pizzaria",
       "subsections": [
         {
           "name": "Pizzaria",
@@ -445,9 +444,9 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Sorveteria",
+  },
+  "sorveteria": {
+    "name": "Sorveteria",
       "subsections": [
         {
           "name": "Açaís",
@@ -614,9 +613,9 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Padaria",
+  },
+  "padaria": {
+    "name": "Padaria",
       "subsections": [
         {
           "name": "Pães",
@@ -813,9 +812,9 @@
           ]
         }
       ]
-    },
-    {
-      "name": "E muito mais!",
+  },
+  "emuitomais": {
+    "name": "E muito mais!",
       "subsections": [
         {
           "name": "Bomboniere",
@@ -883,8 +882,7 @@
           ]
         }
       ]
-    }
-  ],
+  },
   "adittionals": [
     {
       "id": 1,
