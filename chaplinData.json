@@ -891,7 +891,7 @@
       "available": true,
       "price": "R$1,00",
       "value": 1.00,
-      "selected": true,
+      "selected": false,
       "fourFree": true
     },
     {
@@ -911,7 +911,7 @@
       "available": true,
       "price": "R$1,00",
       "value": 1.00,
-      "selected": true,
+      "selected": false,
       "fourFree": true
     },
     {
@@ -931,7 +931,7 @@
       "available": true,
       "price": "R$1,00",
       "value": 1.00,
-      "selected": true,
+      "selected": false,
       "fourFree": true
     },
     {
@@ -941,7 +941,7 @@
       "available": true,
       "price": "R$1,00",
       "value": 1.00,
-      "selected": true,
+      "selected": false,
       "fourFree": true
     },
     {
