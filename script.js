@@ -36,6 +36,21 @@ function showArr(arr) {
   catAcais = arr.sorveteria.subsections[0].products;
 }
 
+window.openLanchonete = function openLanchonete(tabId) {
+  var i;
+  var x = document.getElementsByClassName("tabLanchonete");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(tabId).style.display = "flex";
+  
+  var el = document.querySelectorAll('#tabsLanchonete .tabInsideLanchonete');
+  for (let i = 0; i < el.length; i++) { 
+    el[i].className = 'btn tabInsideLanchonete';
+  }
+  document.getElementById(`tab${tabId}`).className = "btn tabInsideLanchonete active";
+}
+
 async function loadFirebase() {
   try {
     await onValue(starCountRef, (snapshot) => {
@@ -94,7 +109,7 @@ async function loadFirebase() {
       ).join('');
 
       document.getElementById('tabsLanchonete').innerHTML = snapshot.val().lanchonete.subsections.map((subsec, index) => 
-        `<li class="btn ${index===0 ? 'active' : ""}" onclick="openLanchonete('1tab${index+1}')">${subsec.name}</li>`
+        `<li id="tab${index}${subsec.name}" class="btn tabInsideLanchonete ${index===0 ? 'active' : ""}" onclick="openLanchonete('${index+subsec.name}')">${subsec.name}</li>`
       ).join('');
 
 
