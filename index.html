@@ -167,104 +167,104 @@
 <br>
 <h3 class="heading" data-aos="fade-down"><span><i class="fas fa-hamburger" style=" margin-right: 5px;"></i></span>Lanchonete<span><i class="fas fa-hamburger" style=" margin-left: 5px;"></i></span></h3>
 <br>
-<ul class="list" data-aos="fade-down">
-    <li class="btn active" onclick="openLanchonete('1tab1')">Lanches</li>
-    <li class="btn" onclick="openLanchonete('1tab2')">Porções</li>
-    <li class="btn" onclick="openLanchonete('1tab3')">Assados</li>
-    <li class="btn" onclick="openLanchonete('1tab4')">Fritos</li>
+
+<ul id="tabsLanchonete" class="list" data-aos="fade-down">
+    
 </ul>
 
-<div id="1tab1" class="row tabLanchonete" data-aos="fade-right">
-
-    <div class="scroll" style="overflow-y: auto;">
-        <div style="display: flex;width: max-content;">
-            <ul class="listInside">
-                <li class="btnInside active" onclick="openItensTabs('1tab1.1', 'tabLanches')">X-Tudo</li>
-                <li class="btnInside" onclick="openItensTabs('1tab1.2', 'tabLanches')">X-Calabresa</li>
-                <li class="btnInside" onclick="openItensTabs('1tab1.3', 'tabLanches')">X-Egg</li>
-                <li class="btnInside" onclick="openItensTabs('1tab1.4', 'tabLanches')">Americano</li>
-                <li class="btnInside" onclick="openItensTabs('1tab1.5', 'tabLanches')">X-Salada</li>
-                <li class="btnInside" onclick="openItensTabs('1tab1.6', 'tabLanches')">X-Frango</li>
-                <li class="btnInside" onclick="openItensTabs('1tab1.7', 'tabLanches')">X-Burguer</li>
-                <li class="btnInside" onclick="openItensTabs('1tab1.8', 'tabLanches')">Mistão</li>
-            </ul>
+<div id="contentLanchonete">
+    <div id="1tab1" class="row tabLanchonete" data-aos="fade-right">
+    
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('1tab1.1', 'tabLanches')">X-Tudo</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab1.2', 'tabLanches')">X-Calabresa</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab1.3', 'tabLanches')">X-Egg</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab1.4', 'tabLanches')">Americano</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab1.5', 'tabLanches')">X-Salada</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab1.6', 'tabLanches')">X-Frango</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab1.7', 'tabLanches')">X-Burguer</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab1.8', 'tabLanches')">Mistão</li>
+                </ul>
+            </div>
         </div>
+    
+        <div class="break"></div>
+    
+        <div id="catLanches" class="box"></div>
+    
     </div>
-
-    <div class="break"></div>
-
-    <div id="catLanches" class="box"></div>
-
-</div>
-
-<div id="1tab2" class="row tabLanchonete" data-aos="fade-right" style="display:none">
-
-    <div class="scroll" style="overflow-y: auto;">
-        <div style="display: flex;width: max-content;">
-            <ul class="listInside">
-                <li class="btnInside active" onclick="openItensTabs('1tab2.1', 'tabPorcoes')">Completão</li>
-                <li class="btnInside" onclick="openItensTabs('1tab2.2', 'tabPorcoes')">Frango</li>
-                <li class="btnInside" onclick="openItensTabs('1tab2.3', 'tabPorcoes')">Batata Completa</li>
-                <li class="btnInside" onclick="openItensTabs('1tab2.4', 'tabPorcoes')">Batata&Cheddar</li>
-                <li class="btnInside" onclick="openItensTabs('1tab2.5', 'tabPorcoes')">Batata&Bacon</li>
-                <li class="btnInside" onclick="openItensTabs('1tab2.6', 'tabPorcoes')">Batata Frita</li>
-                <li class="btnInside" onclick="openItensTabs('1tab2.7', 'tabPorcoes')">Frango a passarinho</li>
-            </ul>
+    
+    <div id="1tab2" class="row tabLanchonete" data-aos="fade-right" style="display:none">
+    
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('1tab2.1', 'tabPorcoes')">Completão</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab2.2', 'tabPorcoes')">Frango</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab2.3', 'tabPorcoes')">Batata Completa</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab2.4', 'tabPorcoes')">Batata&Cheddar</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab2.5', 'tabPorcoes')">Batata&Bacon</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab2.6', 'tabPorcoes')">Batata Frita</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab2.7', 'tabPorcoes')">Frango a passarinho</li>
+                </ul>
+            </div>
         </div>
+    
+        <div class="break"></div>
+    
+        <div id="catPorcoes" class="box"></div>
+    
     </div>
-
-    <div class="break"></div>
-
-    <div id="catPorcoes" class="box"></div>
-
-</div>
-
-<div id="1tab3" class="row tabLanchonete" data-aos="fade-right" style="display:none">
-
-    <div class="scroll" style="overflow-y: auto;">
-        <div style="display: flex;width: max-content;">
-            <ul class="listInside">
-                <li class="btnInside active" onclick="openItensTabs('1tab3.1', 'tabSalgAssados')">Esfirra de Frango</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.2', 'tabSalgAssados')">E. carne</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.3', 'tabSalgAssados')">E. queijo&presunto</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.4', 'tabSalgAssados')">E. Frango&Catupiry</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.5', 'tabSalgAssados')">E. Frango&Cheddar</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.6', 'tabSalgAssados')">E. Calabresa&Queijo</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.7', 'tabSalgAssados')">E. Calabresa&Queijo&Cheddar</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.8', 'tabSalgAssados')">Hamburgão</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.9', 'tabSalgAssados')">Bauru</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.10', 'tabSalgAssados')">Enroladinho Salsicha</li>
-                <li class="btnInside" onclick="openItensTabs('1tab3.11', 'tabSalgAssados')">E. Salsicha Gourmet</li>
-            </ul>
+    
+    <div id="1tab3" class="row tabLanchonete" data-aos="fade-right" style="display:none">
+    
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('1tab3.1', 'tabSalgAssados')">Esfirra de Frango</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.2', 'tabSalgAssados')">E. carne</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.3', 'tabSalgAssados')">E. queijo&presunto</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.4', 'tabSalgAssados')">E. Frango&Catupiry</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.5', 'tabSalgAssados')">E. Frango&Cheddar</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.6', 'tabSalgAssados')">E. Calabresa&Queijo</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.7', 'tabSalgAssados')">E. Calabresa&Queijo&Cheddar</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.8', 'tabSalgAssados')">Hamburgão</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.9', 'tabSalgAssados')">Bauru</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.10', 'tabSalgAssados')">Enroladinho Salsicha</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab3.11', 'tabSalgAssados')">E. Salsicha Gourmet</li>
+                </ul>
+            </div>
         </div>
+    
+        <div class="break"></div>
+    
+        <div id="catSalgAssados" class="box"></div>
+    
     </div>
-
-    <div class="break"></div>
-
-    <div id="catSalgAssados" class="box"></div>
-
-</div>
-
-<div id="1tab4" class="row tabLanchonete" data-aos="fade-right" style="display:none">
-
-    <div class="scroll" style="overflow-y: auto;">
-        <div style="display: flex;width: max-content;">
-            <ul class="listInside">
-                <li class="btnInside active" onclick="openItensTabs('1tab4.1', 'tabSalgFritos')">Coxinha</li>
-                <li class="btnInside" onclick="openItensTabs('1tab4.2', 'tabSalgFritos')">Risoles Carne</li>
-                <li class="btnInside" onclick="openItensTabs('1tab4.3', 'tabSalgFritos')">Risoles Pizza</li>
-                <li class="btnInside" onclick="openItensTabs('1tab4.4', 'tabSalgFritos')">Enroladinho Salsicha</li>
-                <li class="btnInside" onclick="openItensTabs('1tab4.5', 'tabSalgFritos')">E. Queijo&Presunto</li>
-                <li class="btnInside" onclick="openItensTabs('1tab4.6', 'tabSalgFritos')">Kibe</li>
-                <li class="btnInside" onclick="openItensTabs('1tab4.7', 'tabSalgFritos')">Steak Frango</li>
-            </ul>
+    
+    <div id="1tab4" class="row tabLanchonete" data-aos="fade-right" style="display:none">
+    
+        <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                    <li class="btnInside active" onclick="openItensTabs('1tab4.1', 'tabSalgFritos')">Coxinha</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab4.2', 'tabSalgFritos')">Risoles Carne</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab4.3', 'tabSalgFritos')">Risoles Pizza</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab4.4', 'tabSalgFritos')">Enroladinho Salsicha</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab4.5', 'tabSalgFritos')">E. Queijo&Presunto</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab4.6', 'tabSalgFritos')">Kibe</li>
+                    <li class="btnInside" onclick="openItensTabs('1tab4.7', 'tabSalgFritos')">Steak Frango</li>
+                </ul>
+            </div>
         </div>
+    
+        <div class="break"></div>
+    
+        <div id="catSalgFritos" class="box"></div>
+    
     </div>
-
-    <div class="break"></div>
-
-    <div id="catSalgFritos" class="box"></div>
-
 </div>
 
 <hr class="hrCustom" data-aos="fade-right">

@@ -91,7 +91,11 @@ async function loadFirebase() {
             </div>
           </div>
         </div>`
-      ).join('')
+      ).join('');
+
+      document.getElementById('tabsLanchonete').innerHTML = snapshot.val().lanchonete.subsections.map((subsec, index) => 
+        `<li class="btn ${index===0 ? 'active' : ""}" onclick="openLanchonete('1tab${index+1}')">${subsec.name}</li>`
+      ).join('');
 
 
     }, (error) => {
