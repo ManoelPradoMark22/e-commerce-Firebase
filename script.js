@@ -434,10 +434,13 @@ $(document).ready(function(){
 
   });
 
+  /*
   $('.list .btn').click(function(){
       $(this).addClass('active').siblings().removeClass('active');
   });
 
+  */
+  
   $('.listInside .btnInside').click(function(){
     $(this).addClass('active').siblings().removeClass('active');
   });
