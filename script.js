@@ -112,6 +112,58 @@ async function loadFirebase() {
         `<li id="tab${index}${subsec.name}" class="btn tabInsideLanchonete ${index===0 ? 'active' : ""}" onclick="openLanchonete('${index+subsec.name}')">${subsec.name}</li>`
       ).join('');
 
+      document.getElementById('contentLanchonete').innerHTML = snapshot.val().lanchonete.subsections.map((subsec, index) => 
+        `<div id="${index}${subsec.name}" class="row tabLanchonete" data-aos="fade-right" style="${index===0 ? "" : "display:none"}">
+          <div class="scroll" style="overflow-y: auto;">
+            <div style="display: flex;width: max-content;">
+                <ul class="listInside">
+                  ${subsec.products.map((prod, index2) =>
+                    `
+                    <li class="btnInside ${index2===0 ? "active" : ""}" onclick="openItensTabs('1.${index}.${index2}', '1.${index}')">${prod.name}</li>
+                    `
+                  ).join('')}
+                </ul>
+            </div>
+          </div>
+
+          <div class="break"></div>
+
+          ${subsec.products.map((prod, index2) =>
+            `
+              <div id="1.${index}.${index2}" class="row ${'1.'+index} ${prod.available ? '' : 'itemNotAvailable'}" data-aos="fade-right" style="${index2===0 ? "" : "display:none"}">
+                <div class="image" data-aos="fade-left">
+                    <img src="${prod.img}" alt="${prod.name}">
+                </div>
+
+                <div class="content">
+                  <div class="info">
+                      <h3> <span>${(index2 > 9) ? `${index2+1}` : `0.${index2+1}`}.</span> ${prod.name}</h3>
+                      <text class="priceCatalog">${convertToReal(prod.priceNumb)}</text>
+                      <p>${prod.description}</p>
+                      <button
+                        ${prod.available ? '' : 'disabled'}
+                        class="btnCart btnCart-small addToCart"
+                        data-product-id=${prod.id}
+                        onclick="addItemToCart({
+                          id: '${prod.id}',
+                          name: '${prod.name}',
+                          priceOne: ${prod.priceNumb},
+                          priceNumb: ${prod.priceNumb},
+                          img: '${prod.img}',
+                          count: 1
+                        })">
+                          <i class="fas fa-cart-plus"></i>
+                          Adicionar item
+                      </button>
+                  </div>
+                </div>
+              </div>
+            `
+          ).join('')}
+
+        </div>`
+      ).join('');
+
 
     }, (error) => {
       closeModal();
@@ -434,12 +486,10 @@ $(document).ready(function(){
 
   });
 
-  /*
+
   $('.list .btn').click(function(){
       $(this).addClass('active').siblings().removeClass('active');
   });
-
-  */
   
   $('.listInside .btnInside').click(function(){
     $(this).addClass('active').siblings().removeClass('active');
