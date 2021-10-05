@@ -51,6 +51,23 @@ window.openLanchonete = function openLanchonete(tabId) {
   document.getElementById(`tab${tabId}`).className = "btn tabInsideLanchonete active";
 }
 
+window.openItensTabs = function openItensTabs(prodName, tabName, subsID) {
+  var i;
+  var x = document.getElementsByClassName(tabName);
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(prodName).style.display = "flex";  
+
+  var params = `#listInside1-${subsID} .btnInside`;
+
+  var el = document.querySelectorAll(params);
+  for (let i = 0; i < el.length; i++) { 
+    el[i].className = 'btnInside';
+  }
+  document.getElementById(`subTab${prodName}`).className = "btnInside active";
+}
+
 async function loadFirebase() {
   try {
     await onValue(starCountRef, (snapshot) => {
@@ -116,10 +133,10 @@ async function loadFirebase() {
         `<div id="${index}${subsec.name}" class="row tabLanchonete" data-aos="fade-right" style="${index===0 ? "" : "display:none"}">
           <div class="scroll" style="overflow-y: auto;">
             <div style="display: flex;width: max-content;">
-                <ul class="listInside">
+                <ul id="${`listInside1-${index}`}" class="listInside">
                   ${subsec.products.map((prod, index2) =>
                     `
-                    <li class="btnInside ${index2===0 ? "active" : ""}" onclick="openItensTabs('1.${index}.${index2}', '1.${index}')">${prod.name}</li>
+                    <li id="subTab1.${index}.${index2}" class="btnInside ${index2===0 ? "active" : ""}" onclick="openItensTabs('1.${index}.${index2}', '1.${index}', ${index})">${prod.name}</li>
                     `
                   ).join('')}
                 </ul>
