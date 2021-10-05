@@ -137,7 +137,7 @@ async function loadFirebase() {
 
                 <div class="content">
                   <div class="info">
-                      <h3> <span>${(index2 > 9) ? `${index2+1}` : `0.${index2+1}`}.</span> ${prod.name}</h3>
+                      <h3> <span>${(index2 > 8) ? `${index2+1}` : `0${index2+1}`}.</span> ${prod.name}</h3>
                       <text class="priceCatalog">${convertToReal(prod.priceNumb)}</text>
                       <p>${prod.description}</p>
                       <button
