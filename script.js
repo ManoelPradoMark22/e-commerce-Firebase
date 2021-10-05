@@ -153,6 +153,10 @@ async function loadFirebase() {
                 </div>
 
                 <div class="content">
+                <div class="boxAvaiability" ${prod.available ? "style=display:none" : ""}>
+                  <div class="circleAvailabilty ${prod.available ? 'colorGreen' : 'colorRed'}"></div>
+                  <h3>${prod.available ? 'Disponível' : 'Indisponível'}</h3>
+                </div>
                   <div class="info">
                       <h3> <span>${(index2 > 8) ? `${index2+1}` : `0${index2+1}`}.</span> ${prod.name}</h3>
                       <text class="priceCatalog">${convertToReal(prod.priceNumb)}</text>
