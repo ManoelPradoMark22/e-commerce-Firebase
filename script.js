@@ -166,7 +166,7 @@ async function loadFirebase() {
                         class="btnCart btnCart-small addToCart"
                         data-product-id=${prod[1].id}
                         onclick="addItemToCart({
-                          id: '${prod[1].id}',
+                          id: '${prod[0]}',
                           name: '${prod[1].name}',
                           priceOne: ${prod[1].priceNumb},
                           priceNumb: ${prod[1].priceNumb},
