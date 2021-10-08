@@ -134,9 +134,9 @@ async function loadFirebase() {
           <div class="scroll" style="overflow-y: auto;">
             <div style="display: flex;width: max-content;">
                 <ul id="${`listInside1-${index}`}" class="listInside">
-                  ${subsec.products.map((prod, index2) =>
+                  ${Object.entries(subsec.products).map((prod, index2) =>
                     `
-                    <li id="subTab1.${index}.${index2}" class="btnInside ${index2===0 ? "active" : ""}" onclick="openItensTabs('1.${index}.${index2}', '1.${index}', ${index})">${prod.name}</li>
+                    <li id="subTab1.${index}.${index2}" class="btnInside ${index2===0 ? "active" : ""}" onclick="openItensTabs('1.${index}.${index2}', '1.${index}', ${index})">${prod[1].name}</li>
                     `
                   ).join('')}
                 </ul>
@@ -145,32 +145,32 @@ async function loadFirebase() {
 
           <div class="break"></div>
 
-          ${subsec.products.map((prod, index2) =>
+          ${Object.entries(subsec.products).map((prod, index2) =>
             `
-              <div id="1.${index}.${index2}" class="row ${'1.'+index} ${prod.available ? '' : 'itemNotAvailable'}" data-aos="fade-right" style="${index2===0 ? "" : "display:none"}">
+              <div id="1.${index}.${index2}" class="row ${'1.'+index} ${prod[1].available ? '' : 'itemNotAvailable'}" data-aos="fade-right" style="${index2===0 ? "" : "display:none"}">
                 <div class="image" data-aos="fade-left">
-                    <img src="${prod.img}" alt="${prod.name}">
+                    <img src="${prod[1].img}" alt="${prod[1].name}">
                 </div>
 
                 <div class="content">
-                <div class="boxAvaiability" ${prod.available ? "style=display:none" : ""}>
-                  <div class="circleAvailabilty ${prod.available ? 'colorGreen' : 'colorRed'}"></div>
-                  <h3>${prod.available ? 'Disponível' : 'Indisponível'}</h3>
+                <div class="boxAvaiability" ${prod[1].available ? "style=display:none" : ""}>
+                  <div class="circleAvailabilty ${prod[1].available ? 'colorGreen' : 'colorRed'}"></div>
+                  <h3>${prod[1].available ? 'Disponível' : 'Indisponível'}</h3>
                 </div>
                   <div class="info">
-                      <h3> <span>${(index2 > 8) ? `${index2+1}` : `0${index2+1}`}.</span> ${prod.name}</h3>
-                      <text class="priceCatalog">${convertToReal(prod.priceNumb)}</text>
-                      <p>${prod.description}</p>
+                      <h3> <span>${(index2 > 8) ? `${index2+1}` : `0${index2+1}`}.</span> ${prod[1].name}</h3>
+                      <text class="priceCatalog">${convertToReal(prod[1].priceNumb)}</text>
+                      <p>${prod[1].description}</p>
                       <button
-                        ${prod.available ? '' : 'disabled'}
+                        ${prod[1].available ? '' : 'disabled'}
                         class="btnCart btnCart-small addToCart"
-                        data-product-id=${prod.id}
+                        data-product-id=${prod[1].id}
                         onclick="addItemToCart({
-                          id: '${prod.id}',
-                          name: '${prod.name}',
-                          priceOne: ${prod.priceNumb},
-                          priceNumb: ${prod.priceNumb},
-                          img: '${prod.img}',
+                          id: '${prod[1].id}',
+                          name: '${prod[1].name}',
+                          priceOne: ${prod[1].priceNumb},
+                          priceNumb: ${prod[1].priceNumb},
+                          img: '${prod[1].img}',
                           count: 1
                         })">
                           <i class="fas fa-cart-plus"></i>
