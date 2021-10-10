@@ -18,9 +18,46 @@ const firebaseApp = initializeApp({
 const db = getDatabase(firebaseApp);
 const starCountRef = ref(db);
 
-/*onValue(starCountRef, (snapshot) => {
-  const data = snapshot.val();
-}); */
+let idHambIcon = 1;
+let nameHambIcon = 'fas fa-hamburger';
+
+setInterval(() => {
+  switch(idHambIcon) {
+    case 1:
+      idHambIcon = 2;
+      nameHambIcon = 'fas fa-hamburger';
+      break;
+    case 2:
+      idHambIcon = 3;
+      nameHambIcon = 'fas fa-pizza-slice';
+      break;
+    case 3:
+      idHambIcon = 4;
+      nameHambIcon = 'fas fa-ice-cream';
+      break;
+    case 4:
+      idHambIcon = 5;
+      nameHambIcon = 'fas fa-mug-hot';
+      break;
+    case 5:
+      idHambIcon = 6;
+      nameHambIcon = 'fas fa-hotdog';
+      break;
+    case 6:
+      idHambIcon = 1;
+      nameHambIcon = 'fas fa-candy-cane';
+      break;
+    default:
+      idHambIcon = 1;
+      nameHambIcon = 'fas fa-hamburger';
+      break;
+  }
+  
+  if (!(document.getElementById('menu-bar').classList.contains('fa-times'))){
+    document.getElementById('menu-bar').className = nameHambIcon;
+  }
+
+}, 5000)
 
 let fbArray = [];
 let catAcais = [];
