@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
 import { getDatabase, ref, onValue} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
 
-// Get the modal
+// Get the modal.
 var modal = document.getElementById("myModal");
 
 const firebaseApp = initializeApp({
